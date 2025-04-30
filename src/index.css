@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 260 40% 50%;
+    --primary: 210 65% 20%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 89% 51%;
+    --secondary: 210 65% 45%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 199 89% 51%;
+    --accent: 210 65% 45%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 260 40% 50%;
+    --ring: 210 65% 20%;
 
     --radius: 0.5rem;
   }
@@ -48,16 +48,16 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 260 40% 50%;
+    --primary: 210 65% 20%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 89% 51%;
+    --secondary: 210 65% 45%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 199 89% 51%;
+    --accent: 210 65% 45%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -65,7 +65,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 260 40% 50%;
+    --ring: 210 65% 20%;
   }
 }
 
@@ -87,19 +87,19 @@
   }
   
   .heading-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-biznex-purple to-biznex-light-purple;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-biznex-navy to-biznex-blue;
   }
   
   .btn-primary {
-    @apply bg-biznex-purple hover:bg-biznex-light-purple text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
+    @apply bg-biznex-navy hover:bg-biznex-light-navy text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply bg-biznex-teal hover:opacity-90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
+    @apply bg-biznex-blue hover:opacity-90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
   }
 
   .btn-outline {
-    @apply border-2 border-biznex-purple text-biznex-purple hover:bg-biznex-purple hover:text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
+    @apply border-2 border-biznex-navy text-biznex-navy hover:bg-biznex-navy hover:text-white font-medium py-3 px-6 rounded-md transition-all duration-300;
   }
   
   .card-shadow {
@@ -109,7 +109,7 @@
   .gradient-border {
     @apply relative rounded-xl;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(to right, #6E59A5, #9b87f5) border-box;
+                linear-gradient(to right, #0F2C59, #3E92CC) border-box;
     border: 2px solid transparent;
   }
   

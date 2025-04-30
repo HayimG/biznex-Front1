@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				biznex: {
-					purple: '#6E59A5',
-					'light-purple': '#9b87f5',
-					'dark-purple': '#1A1F2C',
-					teal: '#33C3F0',
+					navy: '#0F2C59',
+					'light-navy': '#1A4D8C',
+					'dark-navy': '#081C3A',
+					blue: '#3E92CC',
 					gray: '#8E9196'
 				}
 			},
@@ -82,11 +82,11 @@ export default {
 				'pulse-glow': {
 					'0%, 100%': { 
 						opacity: '1',
-						boxShadow: '0 0 0 0px rgba(155, 135, 245, 0.4)'
+						boxShadow: '0 0 0 0px rgba(62, 146, 204, 0.4)'
 					},
 					'50%': { 
 						opacity: '0.8',
-						boxShadow: '0 0 0 10px rgba(155, 135, 245, 0)'
+						boxShadow: '0 0 0 10px rgba(62, 146, 204, 0)'
 					}
 				}
 			},
