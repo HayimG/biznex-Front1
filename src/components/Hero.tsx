@@ -48,7 +48,7 @@ const Hero = () => {
 
           {/* Enhanced Subheading with Staggered Animation */}
           <p className={`text-gray-600 text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-            From AI-powered lead gen to support, payments, and beyond — BizneX gives you the freedom to create any conversational flow, anytime. No code. No limits. Just growth.
+            From AI-powered lead gen to support, payments, and beyond - BizneX gives you the freedom to create any conversational flow, anytime. No code. No limits. Just growth.
           </p>
 
           {/* Redesigned CTA Button - Longer and Thinner */}
