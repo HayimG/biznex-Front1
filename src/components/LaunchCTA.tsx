@@ -82,11 +82,7 @@ const LaunchCTA = () => {
                 </span>
               </Button>
               
-              <Button variant="ghost" size="lg" className="text-biznex-navy border border-biznex-navy/20 hover:bg-biznex-navy/5 px-8 py-6 h-auto rounded-full text-lg group relative" onClick={() => window.location.href = "https://biznex.io/app"}>
-                <Play className="mr-1" size={18} />
-                See Live Demo
-                <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-4/5 h-0.5 bg-biznex-blue transition-all duration-300"></span>
-              </Button>
+              
             </div>
           </div>
           
