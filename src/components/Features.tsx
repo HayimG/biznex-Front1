@@ -65,26 +65,27 @@ const Features = () => {
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-biznex-accent/5 rounded-full blur-3xl -z-10"></div>
       
       <div className="container-section">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-          <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
-            POWERFUL FEATURES
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative">
-            Everything You Need to Build{" "}
-            <span className="heading-gradient relative">
-              Exceptional Conversational Flows
-              <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
-                <path className="animate-draw-line" d="M2 10C50 2 150 2 298 10" stroke="#10B981" strokeWidth="3" strokeLinecap="round" fill="none" />
-              </svg>
-            </span>
-          </h2>
-          <p className="text-gray-600 text-lg">
-            BizneX provides all the tools you need to design, build, and deploy interactive conversation flows without any coding.
-          </p>
-        </div>
-
-        {/* Main features container with frame */}
+        {/* This header text is now inside the main frame */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
+            <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
+              POWERFUL FEATURES
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative">
+              Everything You Need to Build{" "}
+              <span className="heading-gradient relative">
+                Exceptional Conversational Flows
+                <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
+                  <path className="animate-draw-line" d="M2 10C50 2 150 2 298 10" stroke="#10B981" strokeWidth="3" strokeLinecap="round" fill="none" />
+                </svg>
+              </span>
+            </h2>
+            <p className="text-gray-600 text-lg">
+              BizneX provides all the tools you need to design, build, and deploy interactive conversation flows without any coding.
+            </p>
+          </div>
+
+          {/* Main features grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="feature-card-container" data-index={index}>
