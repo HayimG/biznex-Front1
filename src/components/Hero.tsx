@@ -1,10 +1,7 @@
-
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Hero = () => {
-  return (
-    <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+  return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Enhanced Background with Multiple Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/10 rounded-full opacity-70 blur-[100px]"></div>
@@ -20,11 +17,7 @@ const Hero = () => {
           {/* Enhanced Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-biznex-navy/10 border border-biznex-navy/20 rounded-full animate-fade-in">
             <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => (
-                <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-biznex-navy to-biznex-blue border-2 border-white flex items-center justify-center">
-                  <Star className="h-3 w-3 text-white" />
-                </div>
-              ))}
+              {[...Array(3)].map((_, i) => {})}
             </div>
             <span className="text-sm font-semibold text-biznex-navy">BUILD INTERACTIVE CONVERSATION FLOWS</span>
           </div>
@@ -62,19 +55,12 @@ const Hero = () => {
 
           {/* Enhanced Quick Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left max-w-3xl mx-auto bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm animate-fade-in">
-            {[
-              "Launch with 20+ ready-made templates",
-              "Customize with a no-code visual builder",
-              "Automate support, capture leads, sell products",
-              "Seamlessly integrate with Stripe, Calendly, CRMs, and more"
-            ].map((benefit, index) => (
-              <div key={index} className="flex items-start gap-3 p-2 hover:bg-biznex-navy/5 rounded-lg transition-colors">
+            {["Launch with 20+ ready-made templates", "Customize with a no-code visual builder", "Automate support, capture leads, sell products", "Seamlessly integrate with Stripe, Calendly, CRMs, and more"].map((benefit, index) => <div key={index} className="flex items-start gap-3 p-2 hover:bg-biznex-navy/5 rounded-lg transition-colors">
                 <div className="bg-gradient-to-br from-biznex-navy to-biznex-blue rounded-full p-1.5 shrink-0 mt-0.5 shadow-sm">
                   <Check className="h-4 w-4 text-white" />
                 </div>
                 <span className="text-gray-700 font-medium">{benefit}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Enhanced CTA Section */}
@@ -108,11 +94,7 @@ const Hero = () => {
             
             {/* Main Content with Enhanced Visuals */}
             <div className="bg-gradient-to-br from-biznex-navy to-biznex-blue p-8 pt-12 rounded-xl text-white">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
-                alt="BizneX Flow Builder Platform" 
-                className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10"
-              />
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10" />
               
               {/* Enhanced Progress Indicator */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20 shadow-inner">
@@ -139,8 +121,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
