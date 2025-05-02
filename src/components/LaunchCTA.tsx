@@ -1,6 +1,9 @@
+
 import { ArrowRight, Play, Rocket, Zap, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import CountUp from "./CountUp";
+
 const LaunchCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -41,7 +44,7 @@ const LaunchCTA = () => {
           }}>
               Ready to Launch Your First Flow - <br />
               <span className="heading-gradient relative">
-                in Just 12 Minutes?
+                in Just <CountUp end="12" suffix=" Minutes?" duration={1500} threshold={0} />
                 <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
                   <path className="animate-draw-line" d="M2 10C50 2 150 2 298 10" stroke="#10B981" strokeWidth="3" strokeLinecap="round" fill="none" />
                 </svg>
@@ -92,7 +95,7 @@ const LaunchCTA = () => {
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer"></div>
             
             <blockquote className="text-gray-700 text-lg italic relative">
-              "We replaced our traditional contact forms with BizneX and saw a 47% increase in completed submissions. The data we gather is more meaningful, and our customers actually enjoy the experience."
+              "We replaced our traditional contact forms with BizneX and saw a <CountUp end="47" suffix="%" duration={1500} /> increase in completed submissions. The data we gather is more meaningful, and our customers actually enjoy the experience."
               <div className="absolute -bottom-2 -right-2 w-20 h-20 text-9xl text-biznex-primary/5 leading-none">"</div>
             </blockquote>
             <div className="flex items-center mt-4">

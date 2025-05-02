@@ -1,19 +1,25 @@
 
 import { Star } from "lucide-react";
 import { useEffect, useRef } from "react";
+import CountUp from "./CountUp";
 
 const SocialProof = () => {
   const metrics = [{
-    value: "40%+",
+    value: "40",
+    suffix: "%+",
     label: "Average increase in form completion rates"
   }, {
-    value: "3.2x",
-    label: "More qualified leads captured"
+    value: "3.2",
+    suffix: "x",
+    label: "More qualified leads captured",
+    decimals: 1
   }, {
-    value: "35%",
+    value: "35",
+    suffix: "%",
     label: "Reduction in support tickets"
   }, {
-    value: "12 min",
+    value: "12",
+    suffix: " min",
     label: "Average time to deploy first flow"
   }];
 
@@ -77,12 +83,26 @@ const SocialProof = () => {
             </div>
           </div>
 
-          {/* Success Metrics */}
+          {/* Success Metrics with Count-Up Animation */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {metrics.map((metric, idx) => <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 text-center hover:shadow-md transition-shadow social-proof-animate animate-scale-in" style={{ transitionDelay: `${300 + idx * 100}ms` }}>
-                <p className="text-3xl font-bold text-biznex-navy mb-2">{metric.value}</p>
+            {metrics.map((metric, idx) => (
+              <div 
+                key={idx} 
+                className="bg-white rounded-xl p-6 border border-gray-200 text-center hover:shadow-md transition-shadow social-proof-animate animate-scale-in" 
+                style={{ transitionDelay: `${300 + idx * 100}ms` }}
+              >
+                <p className="text-3xl font-bold text-biznex-navy mb-2">
+                  <CountUp 
+                    end={metric.value} 
+                    suffix={metric.suffix}
+                    decimals={metric.decimals || 0} 
+                    duration={2000}
+                    threshold={0.1}
+                  />
+                </p>
                 <p className="text-gray-600">{metric.label}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* Featured Testimonial */}
