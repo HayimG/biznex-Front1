@@ -20,7 +20,7 @@ const LaunchCTA = () => {
   }, []);
   
   return (
-    <section id="launch-cta" className="bg-white relative overflow-hidden py-[30px]">
+    <section id="launch-cta" className="py-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-radial from-biznex-primary/5 to-transparent opacity-70 -z-10"></div>
       <div className="absolute top-20 right-20 w-40 h-40 bg-biznex-secondary/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>

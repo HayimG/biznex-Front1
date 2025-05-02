@@ -75,9 +75,10 @@ const Index = () => {
     window.location.href = "https://biznex.io/app";
   };
 
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="space-y-12">
         <Hero />
         <section id="features">
           <Features />
@@ -100,7 +101,8 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Index;

@@ -23,7 +23,7 @@ const FAQ = () => {
   }];
   
   return (
-    <section id="faq" className="bg-white py-[50px]">
+    <section id="faq" className="py-12">
       <div className="container-section">
         {/* Main frame containing both text and content */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
