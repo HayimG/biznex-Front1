@@ -60,7 +60,7 @@ const HowItWorks = () => {
           <div className="text-center max-w-3xl mx-auto mb-16 how-it-works-animate animate-fade-in-up" style={{ transitionDelay: '100ms' }}>
             <p className="text-biznex-blue font-medium tracking-wider mb-3">HOW IT WORKS</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Build Powerful Flows <span className="heading-gradient">in Minutes</span> — No Code Needed
+              Build Powerful Flows <span className="heading-gradient">in Minutes</span> - No Code Needed
             </h2>
             <p className="text-gray-600 text-lg">
               Whether you're starting from a template or building from scratch, BizneX makes it easy to go live with AI-powered conversations in just a few clicks.
