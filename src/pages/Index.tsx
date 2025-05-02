@@ -29,18 +29,28 @@ const Index = () => {
     observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observerRef.current?.unobserve(entry.target);
+          entry.target.classList.add("animate-visible");
+          // Don't unobserve to allow re-animation when scrolling back
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
     });
 
-    // Apply to all elements with animate-on-scroll class
-    const animatedElements = document.querySelectorAll(".animate-on-scroll");
-    animatedElements.forEach(el => {
-      observerRef.current?.observe(el);
+    // Apply to all elements with animate classes
+    const animationClasses = [
+      '.animate-fade-in-up', 
+      '.animate-fade-in-right', 
+      '.animate-fade-in-left', 
+      '.animate-scale-in'
+    ];
+    
+    animationClasses.forEach(className => {
+      const elements = document.querySelectorAll(className);
+      elements.forEach(el => {
+        observerRef.current?.observe(el);
+      });
     });
 
     // Initialize Paddle
