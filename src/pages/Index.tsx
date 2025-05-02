@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
-import Showcase from "../components/Showcase";
+import UseCases from "../components/UseCases";
+import WhyBizneX from "../components/WhyBizneX";
+import HowItWorks from "../components/HowItWorks";
+import SocialProof from "../components/SocialProof";
 import Pricing from "../components/Pricing";
-import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -123,24 +125,26 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <UseCases />
+        <WhyBizneX />
+        <HowItWorks />
         <Features />
-        <Showcase />
-        <section className="py-16 bg-gray-50">
+        <SocialProof />
+        <Pricing />
+        <FAQ />
+        <section className="py-16 bg-gradient-to-r from-biznex-navy to-biznex-blue">
           <div className="container-section text-center">
-            <h2 className="text-3xl font-bold mb-4 text-right">הצטרף לשירות Biznex</h2>
-            <p className="text-lg mb-6 text-right">מנוי חודשי ב-$19.90 בלבד</p>
+            <h2 className="text-3xl font-bold mb-4 text-white">הצטרף לשירות Biznex</h2>
+            <p className="text-lg mb-6 text-white/80">מנוי חודשי ב-$19.90 בלבד</p>
             <Button 
               onClick={openCheckout}
-              className="btn-primary text-lg"
+              className="bg-white text-biznex-navy hover:bg-white/90 text-lg"
               disabled={isLoading}
             >
               {isLoading ? "טוען..." : "התחל מנוי"}
             </Button>
           </div>
         </section>
-        <Pricing />
-        <Testimonials />
-        <FAQ />
       </main>
       <Footer />
     </div>
