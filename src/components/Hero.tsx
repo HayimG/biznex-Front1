@@ -99,30 +99,7 @@ const Hero = () => {
               <img alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" src="/lovable-uploads/157b3d3e-fd77-43da-aa50-dfa31ae14c79.png" />
               
               {/* Enhanced Progress Indicator with More Tech Elements */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20 shadow-inner relative overflow-hidden group-hover:shadow-blue-500/20 group-hover:border-white/30 transition-all duration-500">
-                {/* Animated Light Effect */}
-                
-                
-                <div className="flex justify-between items-center mb-2">
-                  <p className="text-xl font-bold">Build your first conversation flow in seconds</p>
-                  <span className="text-white/80 bg-white/20 px-3 py-1 rounded-full text-sm">75% Complete</span>
-                </div>
-                <div className="flex items-center space-x-2 mt-3">
-                  <div className="h-3 bg-biznex-blue/30 rounded-full w-full overflow-hidden shadow-inner">
-                    <div className="h-full bg-gradient-to-r from-white/80 to-white/80 via-biznex-secondary/80 w-3/4 rounded-full animate-pulse-glow"></div>
-                  </div>
-                </div>
-                <div className="flex justify-between mt-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-white/80">Live Preview</span>
-                  </div>
-                  <button className="bg-white/20 hover:bg-white/30 text-white text-sm px-4 py-1 rounded-md transition-colors hover:shadow-inner group relative overflow-hidden">
-                    <span className="relative z-10">Continue Building</span>
-                    <span className="absolute inset-0 w-0 bg-gradient-to-r from-biznex-primary to-biznex-secondary opacity-50 group-hover:w-full transition-all duration-300"></span>
-                  </button>
-                </div>
-              </div>
+              
             </div>
           </div>
           
