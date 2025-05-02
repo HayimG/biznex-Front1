@@ -47,7 +47,7 @@ const Hero = () => {
           {/* Enhanced Headline with Dynamic Effects */}
           <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
             <span className="inline-block relative">
-              Smarter Conversations.
+              Smarter Conversations
            {/*    <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-biznex-blue transform -translate-x-1/2 transition-all duration-1000 delay-1000" style={{ width: isVisible ? '80%' : '0%' }}></span> */}
             </span> <br />
             <span className="heading-gradient inline-block mt-2 relative">
