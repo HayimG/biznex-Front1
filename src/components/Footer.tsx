@@ -1,33 +1,11 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
+  return <footer className="bg-gray-900 text-white">
       <div className="container-section">
         {/* CTA Section */}
-        <div className="py-16 px-4 sm:px-8 rounded-xl bg-gradient-to-r from-biznex-purple to-biznex-light-purple text-white -mt-10 relative z-10 shadow-xl">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                Ready to transform your user interactions?
-              </h3>
-              <p className="text-white/80 max-w-lg">
-                Join thousands of companies that use BizneX to create better conversations and boost engagement.
-              </p>
-            </div>
-            <Button 
-              size="lg"
-              className="bg-white text-biznex-purple hover:bg-gray-100 px-8"
-              onClick={() => window.location.href = "https://biznex.io/app"}
-            >
-              Start Building for Free
-              <ArrowRight className="ml-2" size={18} />
-            </Button>
-          </div>
-        </div>
+        
 
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -87,15 +65,8 @@ const Footer = () => {
             </p>
             <div className="flex flex-col space-y-3">
               <div className="flex">
-                <Input
-                  type="email"
-                  placeholder="Email address"
-                  className="rounded-r-none bg-gray-800 border-gray-700 text-white"
-                />
-                <Button 
-                  className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple"
-                  onClick={() => window.location.href = "https://biznex.io/app"}
-                >
+                <Input type="email" placeholder="Email address" className="rounded-r-none bg-gray-800 border-gray-700 text-white" />
+                <Button className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple" onClick={() => window.location.href = "https://biznex.io/app"}>
                   Subscribe
                 </Button>
               </div>
@@ -118,8 +89,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
