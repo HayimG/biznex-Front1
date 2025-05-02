@@ -67,13 +67,13 @@ const Header = () => {
           <Button 
             variant="outline" 
             className="border-biznex-primary text-biznex-primary hover:bg-biznex-primary hover:text-white transition-all hover:scale-[1.02]"
-            onClick={() => window.location.href = "https://biznex.io/app"}
+            onClick={() => window.location.href = "https://app.biznex.io"}
           >
             Sign In
           </Button>
           <Button 
             className="bg-biznex-primary hover:bg-biznex-primary/90 text-white rounded-full px-6 hover:shadow-lg transition-all hover:scale-[1.02]"
-            onClick={() => window.location.href = "https://biznex.io/app"}
+            onClick={() => window.location.href = "https://app.biznex.io"}
           >
             Start Free
           </Button>
