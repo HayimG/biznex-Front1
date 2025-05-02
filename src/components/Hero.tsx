@@ -46,48 +46,25 @@ const Hero = () => {
             From AI-powered lead gen to support, payments, and beyond — BizneX gives you the freedom to create any conversational flow, anytime. No code. No limits. Just growth.
           </p>
 
-          {/* Enhanced Social Proof Banner */}
-          <div className="bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10 rounded-lg py-4 px-5 mb-10 animate-fade-in border border-white/50 shadow-sm backdrop-blur-sm">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-              <div className="flex items-center">
-                <div className="h-5 w-5 rounded-full bg-green-500 flex items-center justify-center">
-                  <div className="h-2 w-2 rounded-full bg-white"></div>
-                </div>
-                <span className="ml-2 font-medium text-biznex-navy">Trusted by 500+ companies</span>
-              </div>
-              <div className="hidden md:block h-6 w-px bg-biznex-navy/20"></div>
-              <span className="text-biznex-navy font-medium">Increase conversion rates by up to <span className="text-biznex-blue font-bold text-xl">40%</span></span>
-            </div>
-          </div>
-
-          {/* Enhanced Quick Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left max-w-3xl mx-auto bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm animate-fade-in">
-            {["Launch with 20+ ready-made templates", "Customize with a no-code visual builder", "Automate support, capture leads, sell products", "Seamlessly integrate with Stripe, Calendly, CRMs, and more"].map((benefit, index) => (
-              <div key={index} className="flex items-start gap-3 p-2 hover:bg-biznex-navy/5 rounded-lg transition-colors">
-                <div className="bg-gradient-to-br from-biznex-navy to-biznex-blue rounded-full p-1.5 shrink-0 mt-0.5 shadow-sm">
-                  <Check className="h-4 w-4 text-white" />
-                </div>
-                <span className="text-gray-700 font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
-          {/* Enhanced CTA Section */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
+          {/* Enhanced CTA Section - Redesigned Stronger Button */}
+          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in mb-16">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white text-xl px-10 py-8 h-auto group shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-white/20 relative overflow-hidden"
               onClick={() => window.location.href = "https://biznex.io/app"}
             >
-              Start Free
-              <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
-              <span className="text-xs opacity-80 ml-1">No credit card needed</span>
+              <span className="absolute inset-0 bg-white/10 animate-pulse-glow"></span>
+              <span className="relative flex items-center">
+                Start Free
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={22} />
+              </span>
+              <span className="absolute bottom-1 left-0 right-0 text-xs text-white/90">No credit card needed</span>
             </Button>
           </div>
         </div>
 
         {/* Enhanced Hero Image with Floating Elements */}
-        <div className="mt-14 md:mt-20 max-w-5xl mx-auto animate-fade-in relative">
+        <div className="mt-6 md:mt-12 max-w-5xl mx-auto animate-fade-in relative">
           {/* Floating Elements */}
           <div className="absolute -top-10 -left-10 md:-left-20 w-20 h-20 bg-biznex-navy/10 rounded-xl rotate-12 animate-pulse-glow"></div>
           <div className="absolute -bottom-5 -right-5 md:-right-10 w-16 h-16 bg-biznex-blue/10 rounded-full animate-pulse-glow"></div>
