@@ -51,7 +51,7 @@ const LaunchCTA = () => {
             <p className={`text-gray-600 text-lg mb-8 max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
             transitionDelay: '500ms'
           }}>
-              Join thousands of teams using BizneX to create AI-powered conversations that engage, convert, and support — without writing a single line of code.
+              Join thousands of users using BizneX to create AI-powered conversations that engage, convert, and support — without writing a single line of code.
             </p>
             
             <div className={`flex flex-wrap justify-center gap-6 mb-10 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
