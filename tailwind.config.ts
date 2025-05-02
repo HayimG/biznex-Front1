@@ -107,6 +107,30 @@ export default {
 				'underline-expand': {
 					'0%': { transform: 'scaleX(0)' },
 					'100%': { transform: 'scaleX(1)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'shine': {
+					'0%': { left: '-100%' },
+					'100%': { left: '100%' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '0.4' },
+					'50%': { opacity: '0.8' }
+				},
+				'spin-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundSize: '200% 200%', backgroundPosition: 'left center' },
+					'50%': { backgroundSize: '200% 200%', backgroundPosition: 'right center' },
+				},
+				'draw-line': {
+					'0%': { strokeDasharray: '300', strokeDashoffset: '300' },
+					'100%': { strokeDasharray: '300', strokeDashoffset: '0' }
 				}
 			},
 			animation: {
@@ -116,7 +140,13 @@ export default {
 				'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 				'slide-in-right': 'slide-in-right 0.3s ease-out',
 				'scale-in': 'scale-in 0.2s ease-out',
-				'underline-expand': 'underline-expand 0.3s ease-out'
+				'underline-expand': 'underline-expand 0.3s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'shine': 'shine 1.5s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+				'spin-slow': 'spin-slow 10s linear infinite',
+				'gradient-x': 'gradient-x 5s ease infinite',
+				'draw-line': 'draw-line 1.5s ease-in-out forwards'
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
@@ -130,5 +160,15 @@ export default {
 			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"), {
+		handler: function({ addUtilities, theme, e }) {
+			const animationDelayUtilities = {};
+			[1000, 2000, 3000, 4000, 5000].forEach(delay => {
+				animationDelayUtilities[`.animation-delay-${delay}`] = {
+					'animation-delay': `${delay}ms`,
+				};
+			});
+			addUtilities(animationDelayUtilities, ['responsive']);
+		}
+	}],
 } satisfies Config;
