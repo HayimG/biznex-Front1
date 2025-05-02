@@ -1,25 +1,41 @@
 
 import { CheckCircle, Code, Zap, Users, Database, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 const Features = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
+    // Initialize the Intersection Observer for scroll animations
+    observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          entry.target.classList.add("animate-visible");
           const index = parseInt(entry.target.getAttribute('data-index') || '0');
           setVisibleItems(prev => [...prev, index]);
         }
       });
     }, {
-      threshold: 0.2
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
     });
-    document.querySelectorAll('.feature-card-container').forEach(card => {
-      observer.observe(card);
+
+    // Apply to all elements with animation classes in this component
+    const animatedElements = document.querySelectorAll(".features-animate, .feature-card-container");
+    animatedElements.forEach(el => {
+      observerRef.current?.observe(el);
     });
-    return () => observer.disconnect();
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
+  
   const features = [{
     icon: <MessageSquare className="h-12 w-12 text-biznex-primary" />,
     title: "Visual Flow Builder",
@@ -45,6 +61,7 @@ const Features = () => {
     title: "Analytics Dashboard",
     description: "Gain insights from user interactions with comprehensive analytics and conversion tracking."
   }];
+  
   return <section id="features" className="relative overflow-hidden bg-gray-50 py-[10px]">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-biznex-primary/5 rounded-full blur-3xl -z-10"></div>
@@ -54,7 +71,7 @@ const Features = () => {
         {/* Main frame containing both text and cards */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           {/* Header text section */}
-          <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-10 features-animate animate-fade-in-up" style={{ transitionDelay: '100ms' }}>
             <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
               POWERFUL FEATURES
             </div>
@@ -74,10 +91,9 @@ const Features = () => {
 
           {/* Main features grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => <div key={index} className="feature-card-container h-full" data-index={index}>
-                <Card className={`feature-card h-full rounded-2xl bg-white shadow-md border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${visibleItems.includes(index) ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{
-              transitionDelay: `${index * 100}ms`
-            }}>
+            {features.map((feature, index) => (
+              <div key={index} className="feature-card-container h-full features-animate animate-fade-in-up" data-index={index} style={{ transitionDelay: `${200 + index * 100}ms` }}>
+                <Card className={`feature-card h-full rounded-2xl bg-white shadow-md border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${visibleItems.includes(index) ? 'opacity-100' : 'opacity-0 scale-95'}`}>
                   <CardHeader>
                     <div className="mb-4 relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-biznex-primary/20 to-biznex-secondary/20 rounded-full blur-xl opacity-70"></div>
@@ -96,7 +112,8 @@ const Features = () => {
                     </CardDescription>
                   </CardContent>
                 </Card>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </div>
