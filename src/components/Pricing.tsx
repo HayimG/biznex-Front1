@@ -1,37 +1,9 @@
-
 import { CheckCircle, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
-import CountUp from "./ui/CountUp";
-
 const Pricing = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-    
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      observer.observe(pricingSection);
-    }
-    
-    return () => {
-      if (pricingSection) {
-        observer.disconnect();
-      }
-    };
-  }, []);
-  
   const plans = [{
     name: "Free",
-    price: 0,
+    price: "$0",
     period: "forever",
     description: "Perfect for trying out BizneX",
     features: ["300 Monthly Responses", "Basic Flow Templates", "Standard Customization", "Email Support", "Basic Analytics"],
@@ -40,7 +12,7 @@ const Pricing = () => {
     popular: false
   }, {
     name: "Pro",
-    price: 39,
+    price: "$39",
     period: "/month",
     description: "Best for professionals and growing teams",
     features: ["Unlimited Responses", "All Flow Templates", "Advanced Customization", "All Integrations", "Priority Support", "Advanced Analytics", "Custom Domain", "Custom CSS"],
@@ -49,18 +21,16 @@ const Pricing = () => {
     popular: true
   }, {
     name: "Enterprise",
-    price: null,
-    customPrice: "Custom",
+    price: "Custom",
     description: "For large teams with specific needs",
     features: ["Everything in Pro", "Custom Contracts", "Dedicated Account Manager", "SLA & Uptime Guarantee", "Premium Support", "Advanced Security", "Single Sign-On (SSO)", "Custom Integration Development"],
     limitations: [],
     callToAction: "Contact Sales",
     popular: false
   }];
-  
   return <section id="pricing" className="bg-gray-50 py-[10px]">
       <div className="container-section">
-        <div className={`bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
               PRICING PLANS
@@ -79,16 +49,7 @@ const Pricing = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {plans.map((plan, index) => (
-              <div 
-                key={index} 
-                className={`rounded-xl p-8 border transition-all duration-500 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
-                } ${
-                  plan.popular ? "border-biznex-blue shadow-lg relative transform hover:-translate-y-1" : "border-gray-200 hover:border-gray-300 hover:shadow"
-                }`}
-                style={{ transitionDelay: `${index * 200}ms` }}
-              >
+            {plans.map((plan, index) => <div key={index} className={`rounded-xl p-8 border transition-all duration-300 ${plan.popular ? "border-biznex-blue shadow-lg relative transform hover:-translate-y-1" : "border-gray-200 hover:border-gray-300 hover:shadow"}`}>
                 {plan.popular && <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-biznex-blue text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </div>}
@@ -96,15 +57,7 @@ const Pricing = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-end justify-center">
-                    <span className="text-4xl font-bold">
-                      {plan.price !== null ? (
-                        <CountUp 
-                          end={plan.price} 
-                          prefix={plan.price ? "$" : ""} 
-                          duration={1500} 
-                        />
-                      ) : plan.customPrice}
-                    </span>
+                    <span className="text-4xl font-bold">{plan.price}</span>
                     {plan.period && <span className="text-gray-500 ml-1">{plan.period}</span>}
                   </div>
                   <p className="text-gray-600 mt-2">{plan.description}</p>
@@ -125,9 +78,11 @@ const Pricing = () => {
                   {plan.callToAction}
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                 </Button>
-              </div>
-            ))}
+              </div>)}
           </div>
+
+          {/* Money-Back Guarantee */}
+          
 
           {/* Final CTA */}
           <div className="text-center">

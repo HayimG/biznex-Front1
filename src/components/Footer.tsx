@@ -1,83 +1,13 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useEffect, useState } from "react";
-import { toast } from "@/hooks/use-toast";
-
 const Footer = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [email, setEmail] = useState("");
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    
-    const footerElement = document.querySelector('footer');
-    if (footerElement) {
-      observer.observe(footerElement);
-    }
-    
-    return () => {
-      if (footerElement) {
-        observer.disconnect();
-      }
-    };
-  }, []);
-
-  const handleSubscribe = () => {
-    if (!email) {
-      toast({
-        title: "Email required",
-        description: "Please enter your email address",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address",
-        variant: "destructive"
-      });
-      return;
-    }
-    
-    toast({
-      title: "Thank you for subscribing!",
-      description: "You've been added to our newsletter",
-      variant: "default"
-    });
-    setEmail("");
-  }
-  
-  const animationClasses = isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10";
-  
   return <footer className="bg-gray-900 text-white">
       <div className="container-section">
-        {/* Add a CTA Section with animation */}
-        <div className={`bg-gradient-to-r from-biznex-dark-navy to-biznex-navy rounded-xl p-8 mb-16 transition-all duration-700 ${animationClasses}`}>
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="mb-6 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">Ready to transform your customer experience?</h3>
-              <p className="text-white/80">Start building powerful conversation flows today.</p>
-            </div>
-            <Button className="bg-biznex-purple hover:bg-biznex-light-purple px-6 py-6 text-lg animate-pulse-slow"
-              onClick={() => window.location.href = "https://biznex.io/app"}>
-              Get Started For Free
-              <ArrowRight className="ml-2" />
-            </Button>
-          </div>
-        </div>
+        {/* CTA Section */}
+        
 
-        <div className={`py-16 grid grid-cols-1 md:grid-cols-4 gap-12 transition-all duration-1000 delay-300 ${animationClasses}`}>
+        <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
             <div className="mb-6">
@@ -104,8 +34,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links with staggered animation */}
-          <div className="col-span-1 staggered-fade-in">
+          {/* Quick Links */}
+          <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-6">Product</h3>
             <ul className="space-y-4">
               <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
@@ -116,7 +46,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="col-span-1 staggered-fade-in" style={{ animationDelay: "300ms" }}>
+          <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-4">
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
@@ -127,27 +57,17 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Newsletter with animation */}
-          <div className={`col-span-1 transition-all duration-1000 delay-500 ${animationClasses}`}>
+          {/* Newsletter */}
+          <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-6">Subscribe to Our Newsletter</h3>
             <p className="text-gray-400 mb-4">
               Get the latest news and updates from BizneX.
             </p>
             <div className="flex flex-col space-y-3">
-              <div className="flex relative">
-                <Input 
-                  type="email" 
-                  placeholder="Email address" 
-                  className="rounded-r-none bg-gray-800 border-gray-700 text-white" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <Button 
-                  className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple relative overflow-hidden group" 
-                  onClick={handleSubscribe}
-                >
-                  <span className="relative z-10">Subscribe</span>
-                  <span className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              <div className="flex">
+                <Input type="email" placeholder="Email address" className="rounded-r-none bg-gray-800 border-gray-700 text-white" />
+                <Button className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple" onClick={() => window.location.href = "https://biznex.io/app"}>
+                  Subscribe
                 </Button>
               </div>
               <p className="text-xs text-gray-500">
@@ -157,8 +77,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Footer with sliding animation */}
-        <div className={`border-t border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        {/* Bottom Footer */}
+        <div className="border-t border-gray-800 py-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} BizneX. All rights reserved.
           </p>
