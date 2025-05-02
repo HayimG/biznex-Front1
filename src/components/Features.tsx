@@ -1,3 +1,4 @@
+
 import { CheckCircle, Code, Zap, Users, Database, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
@@ -73,8 +74,8 @@ const Features = () => {
 
           {/* Main features grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => <div key={index} className="feature-card-container" data-index={index}>
-                <Card className={`feature-card rounded-2xl bg-white shadow-md border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${visibleItems.includes(index) ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{
+            {features.map((feature, index) => <div key={index} className="feature-card-container h-full" data-index={index}>
+                <Card className={`feature-card h-full rounded-2xl bg-white shadow-md border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${visibleItems.includes(index) ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{
               transitionDelay: `${index * 100}ms`
             }}>
                   <CardHeader>
@@ -89,7 +90,7 @@ const Features = () => {
                       <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-biznex-primary to-biznex-secondary transition-all duration-300"></span>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-grow">
                     <CardDescription className="text-gray-600 text-base">
                       {feature.description}
                     </CardDescription>
