@@ -39,7 +39,7 @@ const LaunchCTA = () => {
             <h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
             transitionDelay: '400ms'
           }}>
-              Ready to Launch Your First Flow — <br />
+              Ready to Launch Your First Flow - <br />
               <span className="heading-gradient relative">
                 in Just 12 Minutes?
                 <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
@@ -100,8 +100,8 @@ const LaunchCTA = () => {
                 JD
               </div>
               <div className="ml-3">
-                <p className="font-medium text-gray-900">Jane Doe</p>
-                <p className="text-sm text-gray-500">Head of Marketing, Example Corp</p>
+                <p className="font-medium text-gray-900">Jane Theroux</p>
+                <p className="text-sm text-gray-500">Head of Marketing</p>
               </div>
               <div className="ml-auto flex">
                 {[1, 2, 3, 4, 5].map(star => <Star key={star} size={16} className="text-amber-400 fill-amber-400" />)}
