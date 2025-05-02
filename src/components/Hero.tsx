@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute top-96 left-1/2 w-4 h-4 bg-biznex-navy rounded-full opacity-60 animate-float animation-delay-2000"></div>
         
         {/* Tech grid pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNMzAgMzBoMzB2MzBIMzB6IiBmaWxsLW9wYWNpdHk9Ii4wMiIgZmlsbD0iIzNFOTJDQyIvPjxwYXRoIGQ9Ik0wIDMwaDMwdjMwSDB6IiBmaWxsLW9wYWNpdHk9Ii4wMiIgZmlsbD0iIzNFOTJDQyIvPjwvZz48L3N2Zz4=')]"></div>
+        <div className="absolute inset-0 bg-tech-pattern opacity-50"></div>
       </div>
 
       <div className="container-section">
