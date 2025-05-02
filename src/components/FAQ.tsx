@@ -54,9 +54,7 @@ const FAQ = () => {
               <a href="#" className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-md font-medium transition-colors">
                 Visit Help Center
               </a>
-              <a href="#" className="inline-flex items-center justify-center px-6 py-3 bg-biznex-purple text-white hover:bg-biznex-light-purple rounded-md font-medium transition-colors">
-                Contact Support
-              </a>
+              
             </div>
           </div>
         </div>
