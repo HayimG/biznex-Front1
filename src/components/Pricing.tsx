@@ -28,7 +28,7 @@ const Pricing = () => {
     callToAction: "Contact Sales",
     popular: false
   }];
-  return <section id="pricing" className="bg-gray-50 py-[20px]">
+  return <section id="pricing" className="bg-gray-50 py-[10px]">
       <div className="container-section">
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -82,18 +82,11 @@ const Pricing = () => {
           </div>
 
           {/* Money-Back Guarantee */}
-          <div className="bg-gray-50 rounded-xl p-8 text-center max-w-3xl mx-auto mb-10">
-            <p className="text-lg font-medium mb-4">Try BizneX risk-free with our 14-day money-back guarantee.</p>
-            <p className="text-gray-600">Have questions about which plan is right for you? Talk to our team.</p>
-          </div>
+          
 
           {/* Final CTA */}
           <div className="text-center">
-            <Button size="lg" className="btn-primary group">
-              Start Building Today
-              <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
-              <span className="text-xs opacity-80 ml-1">No credit card required for your 14-day free trial</span>
-            </Button>
+            
           </div>
         </div>
       </div>
