@@ -22,6 +22,12 @@ const HowItWorks = () => {
       description: "Embed on your website, share via link, or deploy as a popup. Then watch the results roll in through your dashboard.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
     },
+    {
+      number: "4",
+      title: "Track Performance with Real-Time Insights",
+      description: "View user inputs, engagement metrics, drop-off points, and completion rates — so you can refine your flows and boost results continuously.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+    },
   ];
 
   return (
