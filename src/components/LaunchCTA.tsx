@@ -1,5 +1,5 @@
 
-import { ArrowRight, Play, Rocket, Zap, CheckCircle } from "lucide-react";
+import { ArrowRight, Play, Rocket, Zap, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
