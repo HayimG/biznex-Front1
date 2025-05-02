@@ -1,4 +1,3 @@
-
 import { ArrowRight, Play, Rocket, Zap, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -69,11 +68,7 @@ const LaunchCTA = () => {
             <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-12 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
             transitionDelay: '700ms'
           }}>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500" 
-                onClick={() => window.location.href = "https://app.biznex.io"}
-              >
+              <Button size="lg" onClick={() => window.location.href = "https://app.biznex.io"} className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 h-auto rounded-full text-lg group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500 py-[15px]">
                 {/* Animated glow effect */}
                 <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
                 
