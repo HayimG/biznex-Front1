@@ -69,13 +69,17 @@ const LaunchCTA = () => {
             <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-12 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
             transitionDelay: '700ms'
           }}>
-              <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden" onClick={() => window.location.href = "https://app.biznex.io"}>
-                {/* Ripple effect */}
-                <span className="absolute inset-0 w-full h-full">
-                  <span className="absolute inset-0 bg-white rounded-full scale-0 opacity-0 group-hover:animate-ripple"></span>
-                </span>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500" 
+                onClick={() => window.location.href = "https://app.biznex.io"}
+              >
+                {/* Animated glow effect */}
+                <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
                 
-                {/* Content */}
+                {/* Moving light effect on hover */}
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shine"></span>
+                
                 <span className="relative flex items-center">
                   <Zap size={18} className="mr-2 group-hover:rotate-12 transition-transform" />
                   Start Building for Free
