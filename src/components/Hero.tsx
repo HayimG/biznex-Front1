@@ -1,15 +1,12 @@
-
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     setIsVisible(true);
   }, []);
-  return (
-    <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden py-[50px]">
+  return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden py-[50px]">
       {/* Enhanced Dynamic Background with Animated Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/15 rounded-full opacity-70 blur-[100px] animate-pulse-slow"></div>
@@ -99,7 +96,7 @@ const Hero = () => {
             
             {/* Main Content with Enhanced Visuals */}
             <div className="bg-gradient-to-br from-biznex-navy via-biznex-navy/90 to-biznex-blue/80 p-8 pt-12 rounded-xl text-white">
-              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" />
+              <img alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" src="/lovable-uploads/157b3d3e-fd77-43da-aa50-dfa31ae14c79.png" />
               
               {/* Enhanced Progress Indicator with More Tech Elements */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20 shadow-inner relative overflow-hidden group-hover:shadow-blue-500/20 group-hover:border-white/30 transition-all duration-500">
@@ -133,8 +130,6 @@ const Hero = () => {
           <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-3/4 h-12 rounded-full bg-biznex-blue/5 blur-xl"></div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;
