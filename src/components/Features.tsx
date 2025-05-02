@@ -94,18 +94,7 @@ const Features = () => {
             </div>)}
         </div>
         
-        <div className="mt-16 text-center">
-          <div className="inline-block tech-glow animate-on-scroll">
-            <div className="bg-gradient-to-r from-biznex-navy/5 to-biznex-blue/5 border border-biznex-primary/10 rounded-lg p-4">
-              <div className="flex flex-wrap justify-center gap-3 md:gap-5 text-sm md:text-base">
-                {["Automated Lead Gen", "Customer Support", "Interactive Sales", "Product Demos", "Surveys", "Training"].map((item, i) => <div key={i} className="flex items-center gap-1.5">
-                    <div className="w-2 h-2 rounded-full bg-biznex-primary animate-pulse-slow"></div>
-                    <span className="text-gray-600">{item}</span>
-                  </div>)}
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>;
 };
