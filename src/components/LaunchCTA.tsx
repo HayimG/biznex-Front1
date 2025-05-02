@@ -15,7 +15,7 @@ const LaunchCTA = () => {
     observer.observe(document.getElementById('launch-cta') as Element);
     return () => observer.disconnect();
   }, []);
-  return <section id="launch-cta" className="relative overflow-hidden py-[30px] bg-gray-50">
+  return <section id="launch-cta" className="relative overflow-hidden bg-gray-50 py-[10px]">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-radial from-biznex-primary/5 to-transparent opacity-70 -z-10"></div>
       <div className="absolute top-20 right-20 w-40 h-40 bg-biznex-secondary/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
