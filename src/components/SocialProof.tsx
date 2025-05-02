@@ -13,7 +13,7 @@ const SocialProof = () => {
     value: "12 min",
     label: "Average time to deploy first flow"
   }];
-  return <section className="bg-gray-50 py-[20px]">
+  return <section className="bg-gray-50 py-[10px]">
       <div className="container-section">
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
