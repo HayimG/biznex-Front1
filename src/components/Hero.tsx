@@ -1,3 +1,4 @@
+
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -77,10 +78,9 @@ const Hero = () => {
           <div className="absolute top-1/4 -left-4 w-8 h-8 bg-gradient-to-br from-biznex-secondary to-transparent rounded-lg animate-spin-slow"></div>
           <div className="absolute bottom-1/4 -right-4 w-8 h-8 border-2 border-biznex-primary/30 rounded-lg animate-spin-slow animation-delay-2000"></div>
           
-          {/* Main Card with Enhanced Effects */}
-          <div className="gradient-border card-shadow overflow-hidden relative rounded-2xl transform hover:scale-[1.01] transition-all duration-500 group">
-            {/* Animated Border Glow */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-biznex-navy via-biznex-primary to-biznex-blue rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-1000 group-hover:duration-200 animate-gradient-x"></div>
+          {/* Main Card with Enhanced Effects - Removed flickering animations */}
+          <div className="gradient-border card-shadow overflow-hidden relative rounded-2xl transition-all duration-500">
+            {/* Removed the animated border glow that was causing flickering */}
             
             {/* Browser Controls */}
             <div className="absolute top-0 left-0 right-0 bg-biznex-navy/90 backdrop-blur-sm p-2 z-10 flex items-center">
@@ -94,11 +94,11 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Main Content with Enhanced Visuals */}
+            {/* Main Content with Enhanced Visuals - Removed flickering animations */}
             <div className="bg-gradient-to-br from-biznex-navy via-biznex-navy/90 to-biznex-blue/80 p-8 pt-12 rounded-xl text-white">
-              <img alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" src="/lovable-uploads/157b3d3e-fd77-43da-aa50-dfa31ae14c79.png" />
+              <img alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10" src="/lovable-uploads/157b3d3e-fd77-43da-aa50-dfa31ae14c79.png" />
               
-              {/* Enhanced Progress Indicator with More Tech Elements */}
+              {/* Removed progress indicator section with animations */}
               
             </div>
           </div>
