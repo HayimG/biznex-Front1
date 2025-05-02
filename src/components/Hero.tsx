@@ -1,17 +1,12 @@
-
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  return (
-    <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+  return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden py-[50px]">
       {/* Enhanced Dynamic Background with Animated Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/15 rounded-full opacity-70 blur-[100px] animate-pulse-slow"></div>
@@ -33,13 +28,9 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10 border border-biznex-navy/20 rounded-full animate-fade-in relative overflow-hidden group hover:from-biznex-navy/15 hover:to-biznex-blue/15 transition-all duration-300 cursor-pointer">
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-shine"></div>
             <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => (
-                <div 
-                  key={i} 
-                  className="w-6 h-6 rounded-full bg-gradient-to-r from-biznex-navy to-biznex-blue border border-white transform hover:scale-110 transition-transform"
-                  style={{ transitionDelay: `${i * 100}ms` }}
-                ></div>
-              ))}
+              {[...Array(3)].map((_, i) => <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-r from-biznex-navy to-biznex-blue border border-white transform hover:scale-110 transition-transform" style={{
+              transitionDelay: `${i * 100}ms`
+            }}></div>)}
             </div>
             <span className="text-sm font-semibold text-biznex-navy group-hover:text-biznex-blue transition-colors">BUILD INTERACTIVE CONVERSATION FLOWS</span>
           </div>
@@ -69,11 +60,7 @@ const Hero = () => {
 
           {/* Redesigned CTA Button - Longer and Thinner */}
           <div className={`flex justify-center animate-fade-in mb-20 transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-16 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500"
-              onClick={() => window.location.href = "https://biznex.io/app"}
-            >
+            <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-16 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500" onClick={() => window.location.href = "https://biznex.io/app"}>
               {/* Animated glow effect */}
               <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
               
@@ -116,11 +103,7 @@ const Hero = () => {
             
             {/* Main Content with Enhanced Visuals */}
             <div className="bg-gradient-to-br from-biznex-navy via-biznex-navy/90 to-biznex-blue/80 p-8 pt-12 rounded-xl text-white">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
-                alt="BizneX Flow Builder Platform" 
-                className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" 
-              />
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="BizneX Flow Builder Platform" className="w-full h-auto object-cover rounded-lg shadow-lg border border-white/10 transition-transform duration-700 group-hover:scale-[1.02]" />
               
               {/* Enhanced Progress Indicator with More Tech Elements */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20 shadow-inner relative overflow-hidden group-hover:shadow-blue-500/20 group-hover:border-white/30 transition-all duration-500">
@@ -154,8 +137,6 @@ const Hero = () => {
           <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-3/4 h-12 rounded-full bg-biznex-blue/5 blur-xl"></div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Hero;

@@ -1,63 +1,50 @@
-
 import { ArrowRight, Calendar, Star, Users, Zap, CheckCircle, CircleDollarSign, FileText, LayoutList, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const UseCases = () => {
-  const useCases = [
-    {
-      title: "Lead Generation & Qualification",
-      description: "Capture leads with smart, engaging flows that ask the right questions and score automatically.",
-      stats: "Users report 3x more qualified leads",
-      icon: Users,
-      color: "bg-blue-500",
-    },
-    {
-      title: "Product Quizzes & Estimators",
-      description: "Help users discover the right plan, service, or product — with interactive logic and instant results.",
-      icon: LayoutGrid,
-      color: "bg-purple-500",
-    },
-    {
-      title: "Meeting Booking with Lead Capture",
-      description: "Connect Calendly and qualify leads before they book. Fewer no-shows, better-fit calls.",
-      icon: Calendar,
-      color: "bg-green-500",
-    },
-    {
-      title: "AI-Powered Chat Experiences",
-      description: "Build GPT-like conversations that guide, recommend, or answer — 24/7, branded, and personalized.",
-      icon: Zap,
-      color: "bg-amber-500",
-    },
-    {
-      title: "Customer Support & FAQs",
-      description: "Reduce support load with conversational flows that resolve common issues automatically.",
-      stats: "Cut support tickets by 35%",
-      icon: CheckCircle,
-      color: "bg-indigo-500",
-    },
-    {
-      title: "Digital Product Checkout",
-      description: "Sell digital goods or services directly inside the chat — with Stripe or Paddle integration.",
-      icon: CircleDollarSign,
-      color: "bg-pink-500",
-    },
-    {
-      title: "Surveys, Feedback & NPS",
-      description: "Collect insights that actually get completed — through smooth, interactive flows.",
-      icon: FileText,
-      color: "bg-cyan-500",
-    },
-    {
-      title: "Onboarding & Internal Use",
-      description: "Create onboarding assistants, internal help bots, or interactive SOPs for your team.",
-      icon: LayoutList,
-      color: "bg-orange-500",
-    },
-  ];
-
-  return (
-    <section id="use-cases" className="py-20 bg-white">
+  const useCases = [{
+    title: "Lead Generation & Qualification",
+    description: "Capture leads with smart, engaging flows that ask the right questions and score automatically.",
+    stats: "Users report 3x more qualified leads",
+    icon: Users,
+    color: "bg-blue-500"
+  }, {
+    title: "Product Quizzes & Estimators",
+    description: "Help users discover the right plan, service, or product — with interactive logic and instant results.",
+    icon: LayoutGrid,
+    color: "bg-purple-500"
+  }, {
+    title: "Meeting Booking with Lead Capture",
+    description: "Connect Calendly and qualify leads before they book. Fewer no-shows, better-fit calls.",
+    icon: Calendar,
+    color: "bg-green-500"
+  }, {
+    title: "AI-Powered Chat Experiences",
+    description: "Build GPT-like conversations that guide, recommend, or answer — 24/7, branded, and personalized.",
+    icon: Zap,
+    color: "bg-amber-500"
+  }, {
+    title: "Customer Support & FAQs",
+    description: "Reduce support load with conversational flows that resolve common issues automatically.",
+    stats: "Cut support tickets by 35%",
+    icon: CheckCircle,
+    color: "bg-indigo-500"
+  }, {
+    title: "Digital Product Checkout",
+    description: "Sell digital goods or services directly inside the chat — with Stripe or Paddle integration.",
+    icon: CircleDollarSign,
+    color: "bg-pink-500"
+  }, {
+    title: "Surveys, Feedback & NPS",
+    description: "Collect insights that actually get completed — through smooth, interactive flows.",
+    icon: FileText,
+    color: "bg-cyan-500"
+  }, {
+    title: "Onboarding & Internal Use",
+    description: "Create onboarding assistants, internal help bots, or interactive SOPs for your team.",
+    icon: LayoutList,
+    color: "bg-orange-500"
+  }];
+  return <section id="use-cases" className="bg-white py-[51px]">
       <div className="container-section">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-biznex-blue font-medium tracking-wider mb-3">USE CASES</p>
@@ -70,23 +57,16 @@ const UseCases = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {useCases.map((useCase, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group"
-            >
+          {useCases.map((useCase, index) => <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group">
               <div className={`${useCase.color} text-white p-3 rounded-lg inline-flex mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <useCase.icon className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-bold mb-2">{useCase.title}</h3>
               <p className="text-gray-600 mb-3">{useCase.description}</p>
-              {useCase.stats && (
-                <div className="bg-gray-50 rounded-lg py-2 px-3 text-sm font-medium text-gray-700">
+              {useCase.stats && <div className="bg-gray-50 rounded-lg py-2 px-3 text-sm font-medium text-gray-700">
                   {useCase.stats}
-                </div>
-              )}
-            </div>
-          ))}
+                </div>}
+            </div>)}
         </div>
 
         <div className="text-center mt-12">
@@ -96,8 +76,6 @@ const UseCases = () => {
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default UseCases;
