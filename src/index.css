@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -75,8 +74,7 @@
   }
 
   body {
-    @apply font-inter;
-    scroll-behavior: smooth; /* Direct CSS property instead of non-existent Tailwind class */
+    @apply font-inter scroll-behavior-smooth;
     background-color: #9FAFBF;
     color: hsl(var(--foreground));
   }
