@@ -64,7 +64,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
               </span>
               {/*}  <span className="absolute bottom-1 left-0 right-0 text-xs text-white/80">No credit card needed</span> */}
-            </Button>
+            </Button> /n
              No credit card needed
           </div>
         </div>
