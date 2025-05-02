@@ -1,5 +1,7 @@
+
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const HowItWorks = () => {
   const steps = [{
     number: "1",
@@ -22,63 +24,72 @@ const HowItWorks = () => {
     description: "Monitor performance in real time. See user inputs, engagement levels, and completion rates to refine your flows and boost results.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }];
-  return <section id="how-it-works" className="bg-white py-[50px]">
+  
+  return (
+    <section id="how-it-works" className="bg-white py-[50px]">
       <div className="container-section">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-biznex-blue font-medium tracking-wider mb-3">HOW IT WORKS</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Build Powerful Flows <span className="heading-gradient">in Minutes</span> — No Code Needed
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Whether you're starting from a template or building from scratch, BizneX makes it easy to go live with AI-powered conversations in just a few clicks.
-          </p>
-        </div>
+        {/* Main frame containing both text and content */}
+        <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-biznex-blue font-medium tracking-wider mb-3">HOW IT WORKS</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Build Powerful Flows <span className="heading-gradient">in Minutes</span> — No Code Needed
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Whether you're starting from a template or building from scratch, BizneX makes it easy to go live with AI-powered conversations in just a few clicks.
+            </p>
+          </div>
 
-        <div className="space-y-20 md:space-y-32">
-          {steps.map((step, index) => <div key={index} className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-12 items-center`}>
-              <div className="flex-1 space-y-6">
-                <div className="inline-block py-1 px-3 rounded-full bg-biznex-navy text-white font-semibold">
-                  Step {step.number}
+          <div className="space-y-20 md:space-y-32">
+            {steps.map((step, index) => (
+              <div key={index} className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 md:gap-12 items-center`}>
+                <div className="flex-1 space-y-6">
+                  <div className="inline-block py-1 px-3 rounded-full bg-biznex-navy text-white font-semibold">
+                    Step {step.number}
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
+                  <p className="text-gray-600 text-lg">{step.description}</p>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold">{step.title}</h3>
-                <p className="text-gray-600 text-lg">{step.description}</p>
-              </div>
-              
-              <div className="flex-1">
-                <div className="relative rounded-xl overflow-hidden shadow-lg">
-                  <div className="absolute inset-0 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10"></div>
-                  <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
+                
+                <div className="flex-1">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10"></div>
+                    <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
+                  </div>
                 </div>
               </div>
-            </div>)}
-        </div>
+            ))}
+          </div>
 
-        {/* Time Comparison */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h4 className="font-semibold mb-2">Traditional Development:</h4>
-            <p className="text-3xl font-bold text-gray-800 mb-2">2-4 weeks</p>
-            <div className="h-4 w-full bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-gray-400 w-full"></div>
+          {/* Time Comparison */}
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h4 className="font-semibold mb-2">Traditional Development:</h4>
+              <p className="text-3xl font-bold text-gray-800 mb-2">2-4 weeks</p>
+              <div className="h-4 w-full bg-gray-200 rounded-full overflow-hidden">
+                <div className="h-full bg-gray-400 w-full"></div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+              <h4 className="font-semibold mb-2">With BizneX:</h4>
+              <p className="text-3xl font-bold text-biznex-navy mb-2">10-15 minutes</p>
+              <div className="h-4 w-full bg-blue-200 rounded-full overflow-hidden">
+                <div className="h-full bg-biznex-blue w-[10%]"></div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-            <h4 className="font-semibold mb-2">With BizneX:</h4>
-            <p className="text-3xl font-bold text-biznex-navy mb-2">10-15 minutes</p>
-            <div className="h-4 w-full bg-blue-200 rounded-full overflow-hidden">
-              <div className="h-full bg-biznex-blue w-[10%]"></div>
-            </div>
+          <div className="text-center mt-16">
+            <Button className="btn-secondary group">
+              See BizneX in Action
+              <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
+            </Button>
           </div>
-        </div>
-
-        <div className="text-center mt-16">
-          <Button className="btn-secondary group">
-            See BizneX in Action
-            <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
-          </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HowItWorks;
