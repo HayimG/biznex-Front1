@@ -25,6 +25,12 @@ const Index = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    // Force HTTPS for all users
+    if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost') {
+      window.location.href = window.location.href.replace('http:', 'https:');
+      return;
+    }
+
     // Initialize the Intersection Observer for scroll animations
     observerRef.current = new IntersectionObserver(entries => {
       entries.forEach(entry => {
