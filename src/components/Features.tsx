@@ -65,9 +65,10 @@ const Features = () => {
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-biznex-accent/5 rounded-full blur-3xl -z-10"></div>
       
       <div className="container-section">
-        {/* This header text is now inside the main frame */}
+        {/* Main frame containing both text and cards */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
-          <div className="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
+          {/* Header text section */}
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
               POWERFUL FEATURES
             </div>
