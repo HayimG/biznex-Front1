@@ -12,13 +12,23 @@ const SocialProof = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container-section">
-        {/* Main frame containing both text and content */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-biznex-blue font-medium tracking-wider mb-3">TRUSTED WORLDWIDE</p>
+            <div className="inline-block rounded-full bg-biznex-primary/10 px-3 py-1 text-biznex-primary text-sm font-medium mb-4">
+              TRUSTED WORLDWIDE
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Join Industry Leaders <span className="heading-gradient">Who Build with BizneX</span>
+              Join Industry Leaders{" "}
+              <span className="heading-gradient relative">
+                Who Build with BizneX
+                <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 300 12" xmlns="http://www.w3.org/2000/svg">
+                  <path className="animate-draw-line" d="M2 10C50 2 150 2 298 10" stroke="#3E92CC" strokeWidth="3" strokeLinecap="round" fill="none" />
+                </svg>
+              </span>
             </h2>
+            <p className="text-gray-600 text-lg">
+              Thousands of companies trust BizneX to power their most critical customer interactions.
+            </p>
           </div>
 
           {/* Logo Cloud */}
