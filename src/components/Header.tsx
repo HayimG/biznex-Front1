@@ -49,7 +49,10 @@ const Header = () => {
           <a href="#features" className="nav-link">
             Features
           </a>
-          <a href="#showcase" className="nav-link">
+          <a href="#use-cases" className="nav-link">
+            Use Cases
+          </a>
+          <a href="#how-it-works" className="nav-link">
             How it Works
           </a>
           <a href="#pricing" className="nav-link">
@@ -112,7 +115,14 @@ const Header = () => {
               Features
             </a>
             <a
-              href="#showcase"
+              href="#use-cases"
+              className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Use Cases
+            </a>
+            <a
+              href="#how-it-works"
               className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >

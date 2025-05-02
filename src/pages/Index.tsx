@@ -79,13 +79,25 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Features />
-        <UseCases />
-        <HowItWorks />
+        <section id="features">
+          <Features />
+        </section>
+        <section id="use-cases">
+          <UseCases />
+        </section>
+        <section id="how-it-works">
+          <HowItWorks />
+        </section>
         <LaunchCTA />
-        <SocialProof />
-        <Pricing />
-        <FAQ />
+        <section id="social-proof">
+          <SocialProof />
+        </section>
+        <section id="pricing">
+          <Pricing />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
       </main>
       <Footer />
     </div>;
