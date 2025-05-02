@@ -1,7 +1,5 @@
-
 import { CheckCircle, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Pricing = () => {
   const plans = [{
     name: "Free",
@@ -30,9 +28,7 @@ const Pricing = () => {
     callToAction: "Contact Sales",
     popular: false
   }];
-  
-  return (
-    <section id="pricing" className="bg-gray-50 py-20">
+  return <section id="pricing" className="bg-gray-50 py-[20px]">
       <div className="container-section">
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -53,13 +49,10 @@ const Pricing = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {plans.map((plan, index) => (
-              <div key={index} className={`rounded-xl p-8 border transition-all duration-300 ${plan.popular ? "border-biznex-blue shadow-lg relative transform hover:-translate-y-1" : "border-gray-200 hover:border-gray-300 hover:shadow"}`}>
-                {plan.popular && 
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-biznex-blue text-white px-4 py-1 rounded-full text-sm font-medium">
+            {plans.map((plan, index) => <div key={index} className={`rounded-xl p-8 border transition-all duration-300 ${plan.popular ? "border-biznex-blue shadow-lg relative transform hover:-translate-y-1" : "border-gray-200 hover:border-gray-300 hover:shadow"}`}>
+                {plan.popular && <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-biznex-blue text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
-                  </div>
-                }
+                  </div>}
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
@@ -71,26 +64,21 @@ const Pricing = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
+                  {plan.features.map((feature, i) => <li key={i} className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
                       <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                  {plan.limitations.map((limitation, i) => (
-                    <li key={`lim-${i}`} className="flex items-start opacity-70">
+                    </li>)}
+                  {plan.limitations.map((limitation, i) => <li key={`lim-${i}`} className="flex items-start opacity-70">
                       <X className="h-5 w-5 text-gray-400 mr-2 mt-0.5" />
                       <span className="text-gray-500">{limitation}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <Button className={`w-full ${plan.popular ? "bg-biznex-blue hover:bg-biznex-light-navy" : plan.name === "Enterprise" ? "bg-gray-900 hover:bg-gray-800" : "bg-white border-2 border-biznex-blue text-biznex-blue hover:bg-biznex-blue hover:text-white"} group`}>
                   {plan.callToAction}
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                 </Button>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Money-Back Guarantee */}
@@ -109,8 +97,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
