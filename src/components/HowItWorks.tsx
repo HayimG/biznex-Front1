@@ -57,21 +57,9 @@ const HowItWorks = () => {
 
           {/* Time Comparison */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <h4 className="font-semibold mb-2">Traditional Development:</h4>
-              <p className="text-3xl font-bold text-gray-800 mb-2">2-4 weeks</p>
-              <div className="h-4 w-full bg-gray-200 rounded-full overflow-hidden">
-                <div className="h-full bg-gray-400 w-full"></div>
-              </div>
-            </div>
+            
 
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-              <h4 className="font-semibold mb-2">With BizneX:</h4>
-              <p className="text-3xl font-bold text-biznex-navy mb-2">10-15 minutes</p>
-              <div className="h-4 w-full bg-blue-200 rounded-full overflow-hidden">
-                <div className="h-full bg-biznex-blue w-[10%]"></div>
-              </div>
-            </div>
+            
           </div>
 
           <div className="text-center mt-16">
