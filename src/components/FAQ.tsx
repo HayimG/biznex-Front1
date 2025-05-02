@@ -19,7 +19,7 @@ const FAQ = () => {
     question: "Can I white-label the conversational flows?",
     answer: "Yes, our Pro and Enterprise plans allow you to fully white-label your conversational experiences with your own branding, custom domains, and CSS customization."
   }];
-  return <section id="faq" className="py-[50px] bg-gray-50">
+  return <section id="faq" className="bg-gray-50 py-[20px]">
       <div className="container-section">
         {/* Main frame containing both text and content */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
