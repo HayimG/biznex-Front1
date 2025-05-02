@@ -1,28 +1,21 @@
-
 import { ArrowRight, Play, Rocket, Zap, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-
 const LaunchCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, {
+      threshold: 0.1
+    });
     observer.observe(document.getElementById('launch-cta') as Element);
     return () => observer.disconnect();
   }, []);
-
-  return (
-    <section id="launch-cta" className="py-20 bg-white relative overflow-hidden">
+  return <section id="launch-cta" className="bg-white relative overflow-hidden py-[50px]">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-radial from-biznex-primary/5 to-transparent opacity-70 -z-10"></div>
       <div className="absolute top-20 right-20 w-40 h-40 bg-biznex-secondary/10 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
@@ -32,9 +25,7 @@ const LaunchCTA = () => {
       <div className="absolute -left-10 bottom-1/4 w-40 h-40 rounded-full border border-biznex-secondary/10 animate-spin-slow animation-delay-2000 opacity-30"></div>
       
       <div className="container-section">
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 ${
-          isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'
-        }`}>
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
           <div className="bg-gradient-to-r from-biznex-navy/5 via-white to-biznex-blue/5 rounded-2xl p-10 shadow-lg border border-biznex-blue/10 overflow-hidden relative">
             {/* Radial light effect */}
             <div className="absolute inset-0 bg-gradient-radial from-white via-transparent to-transparent opacity-60"></div>
@@ -44,50 +35,41 @@ const LaunchCTA = () => {
             <div className="absolute bottom-20 left-10 w-12 h-12 rounded-full border border-biznex-primary/20 animate-spin-slow"></div>
             
             <div className="text-center mb-8 relative">
-              <div className={`inline-flex items-center gap-2 px-4 py-2 mb-4 bg-biznex-primary/10 rounded-full transition-all duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-              }`} style={{ transitionDelay: '300ms' }}>
+              <div className={`inline-flex items-center gap-2 px-4 py-2 mb-4 bg-biznex-primary/10 rounded-full transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+              transitionDelay: '300ms'
+            }}>
                 <Rocket size={18} className="text-biznex-primary animate-bounce-subtle" />
                 <span className="font-medium text-biznex-primary">Ready to transform your business?</span>
               </div>
               
-              <h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-              }`} style={{ transitionDelay: '400ms' }}>
+              <h2 className={`text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+              transitionDelay: '400ms'
+            }}>
                 Ready to Launch Your First Flow — <br />
                 <span className="heading-gradient">in Just 12 Minutes?</span>
               </h2>
               
-              <p className={`text-gray-600 text-lg mb-8 max-w-3xl mx-auto transition-all duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-              }`} style={{ transitionDelay: '500ms' }}>
+              <p className={`text-gray-600 text-lg mb-8 max-w-3xl mx-auto transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+              transitionDelay: '500ms'
+            }}>
                 Join thousands of teams using BizneX to create AI-powered conversations that engage, convert, and support — without writing a single line of code.
               </p>
               
-              <div className={`flex flex-wrap justify-center gap-6 mb-10 transition-all duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-              }`} style={{ transitionDelay: '600ms' }}>
-                {["No setup delays", "No code required", "No credit card needed"].map((benefit, i) => (
-                  <div 
-                    key={benefit}
-                    className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:border-biznex-primary/30 transition-all duration-300 hover:shadow-md group"
-                  >
+              <div className={`flex flex-wrap justify-center gap-6 mb-10 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+              transitionDelay: '600ms'
+            }}>
+                {["No setup delays", "No code required", "No credit card needed"].map((benefit, i) => <div key={benefit} className="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:border-biznex-primary/30 transition-all duration-300 hover:shadow-md group">
                     <div className="h-6 w-6 rounded-full bg-biznex-primary/10 flex items-center justify-center group-hover:bg-biznex-primary/20 transition-colors">
                       <CheckCircle size={14} className="text-biznex-primary" />
                     </div>
                     <span className="text-gray-700 font-medium">{benefit}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               
-              <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-12 transition-all duration-700 ${
-                isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-              }`} style={{ transitionDelay: '700ms' }}>
-                <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden"
-                  onClick={() => window.location.href = "https://biznex.io/app"}
-                >
+              <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-12 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+              transitionDelay: '700ms'
+            }}>
+                <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden" onClick={() => window.location.href = "https://biznex.io/app"}>
                   {/* Ripple effect */}
                   <span className="absolute inset-0 w-full h-full">
                     <span className="absolute inset-0 bg-white rounded-full scale-0 opacity-0 group-hover:animate-ripple"></span>
@@ -101,12 +83,7 @@ const LaunchCTA = () => {
                   </span>
                 </Button>
                 
-                <Button 
-                  variant="ghost"
-                  size="lg"
-                  className="text-biznex-navy border border-biznex-navy/20 hover:bg-biznex-navy/5 px-8 py-6 h-auto rounded-full text-lg group relative"
-                  onClick={() => window.location.href = "https://biznex.io/app"}
-                >
+                <Button variant="ghost" size="lg" className="text-biznex-navy border border-biznex-navy/20 hover:bg-biznex-navy/5 px-8 py-6 h-auto rounded-full text-lg group relative" onClick={() => window.location.href = "https://biznex.io/app"}>
                   <Play className="mr-1" size={18} />
                   See Live Demo
                   <span className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-4/5 h-0.5 bg-biznex-blue transition-all duration-300"></span>
@@ -114,9 +91,9 @@ const LaunchCTA = () => {
               </div>
             </div>
             
-            <div className={`bg-white rounded-xl p-6 shadow-md border border-gray-50 hover:border-gray-100 transition-all duration-500 relative overflow-hidden group tech-glow transition-all duration-700 ${
-              isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'
-            }`} style={{ transitionDelay: '800ms' }}>
+            <div className={`bg-white rounded-xl p-6 shadow-md border border-gray-50 hover:border-gray-100 transition-all duration-500 relative overflow-hidden group tech-glow transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
+            transitionDelay: '800ms'
+          }}>
               {/* Shimmer effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shimmer"></div>
               
@@ -133,21 +110,13 @@ const LaunchCTA = () => {
                   <p className="text-sm text-gray-500">Head of Marketing, Example Corp</p>
                 </div>
                 <div className="ml-auto flex">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star 
-                      key={star} 
-                      size={16} 
-                      className="text-amber-400 fill-amber-400" 
-                    />
-                  ))}
+                  {[1, 2, 3, 4, 5].map(star => <Star key={star} size={16} className="text-amber-400 fill-amber-400" />)}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LaunchCTA;
