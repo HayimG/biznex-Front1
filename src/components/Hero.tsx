@@ -90,7 +90,7 @@ const Hero = () => {
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
               <div className="flex-1 bg-biznex-navy/40 rounded-md h-5 flex items-center justify-center">
-                <span className="text-xs text-white/70">app.biznex.io/dashboard</span>
+                
               </div>
             </div>
             
@@ -101,7 +101,7 @@ const Hero = () => {
               {/* Enhanced Progress Indicator with More Tech Elements */}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mt-6 border border-white/20 shadow-inner relative overflow-hidden group-hover:shadow-blue-500/20 group-hover:border-white/30 transition-all duration-500">
                 {/* Animated Light Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-shine"></div>
+                
                 
                 <div className="flex justify-between items-center mb-2">
                   <p className="text-xl font-bold">Build your first conversation flow in seconds</p>
