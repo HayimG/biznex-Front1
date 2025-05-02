@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -74,9 +76,8 @@
   }
 
   body {
-    @apply font-inter;
+    @apply bg-background text-foreground font-inter;
     scroll-behavior: smooth;
-    color: hsl(var(--foreground));
   }
   
   ::selection {
@@ -87,7 +88,7 @@
 /* Custom Utilities */
 @layer components {
   .container-section {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
   .heading-gradient {
