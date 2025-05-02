@@ -24,8 +24,8 @@ const HowItWorks = () => {
     },
     {
       number: "4",
-      title: "Track Performance with Real-Time Insights",
-      description: "View user inputs, engagement metrics, drop-off points, and completion rates — so you can refine your flows and boost results continuously.",
+      title: "Track & Optimize",
+      description: "Monitor performance in real time. See user inputs, engagement levels, and completion rates to refine your flows and boost results.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
     },
   ];
