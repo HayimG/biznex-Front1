@@ -44,7 +44,7 @@ const UseCases = () => {
     icon: LayoutList,
     color: "bg-orange-500"
   }];
-  return <section id="use-cases" className="bg-gray-50 py-[20px]">
+  return <section id="use-cases" className="bg-gray-50 py-[10px]">
       <div className="container-section">
         {/* Main frame containing both text and cards */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
