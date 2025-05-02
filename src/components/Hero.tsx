@@ -22,18 +22,10 @@ const Hero = () => {
         <div className="absolute inset-0 bg-tech-pattern opacity-50"></div>
       </div>
 
-      <div className="container-section">
+      <div className="container-section py-[50px]">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
           {/* Enhanced Interactive Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10 border border-biznex-navy/20 rounded-full animate-fade-in relative overflow-hidden group hover:from-biznex-navy/15 hover:to-biznex-blue/15 transition-all duration-300 cursor-pointer">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12 animate-shine"></div>
-            <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-r from-biznex-navy to-biznex-blue border border-white transform hover:scale-110 transition-transform" style={{
-              transitionDelay: `${i * 100}ms`
-            }}></div>)}
-            </div>
-            <span className="text-sm font-semibold text-biznex-navy group-hover:text-biznex-blue transition-colors">BUILD INTERACTIVE CONVERSATION FLOWS</span>
-          </div>
+          
 
           {/* Enhanced Headline with Dynamic Effects */}
           <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
