@@ -65,7 +65,7 @@ const Hero = () => {
               </span>
               {/*}  <span className="absolute bottom-1 left-0 right-0 text-xs text-white/80">No credit card needed</span> */}
             </Button> 
-             <p> No credit card needed </p>
+             <br></bt><p> No credit card needed </p>
           </div>
         </div>
 
