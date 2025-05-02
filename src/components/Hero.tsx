@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Enhanced Dynamic Background with Animated Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/15 rounded-full opacity-70 blur-[100px] animate-pulse-slow"></div>
-        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-purple-200 rounded-full opacity-60 blur-[80px] animate-pulse-slow animation-delay-2000"></div>
+        {/*  <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-purple-200 rounded-full opacity-60 blur-[80px] animate-pulse-slow animation-delay-2000"></div> */}
         <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-blue-200/50 rounded-full opacity-50 blur-[60px] animate-pulse-slow animation-delay-1000"></div>
         
         {/* Animated particles */}
