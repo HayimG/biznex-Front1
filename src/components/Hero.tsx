@@ -1,5 +1,7 @@
+
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Hero = () => {
   return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Enhanced Background with Multiple Layers */}
@@ -17,7 +19,12 @@ const Hero = () => {
           {/* Enhanced Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-biznex-navy/10 border border-biznex-navy/20 rounded-full animate-fade-in">
             <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => {})}
+              {[...Array(3)].map((_, i) => (
+                <div 
+                  key={i} 
+                  className="w-6 h-6 rounded-full bg-gradient-to-r from-biznex-navy to-biznex-blue border border-white"
+                ></div>
+              ))}
             </div>
             <span className="text-sm font-semibold text-biznex-navy">BUILD INTERACTIVE CONVERSATION FLOWS</span>
           </div>
@@ -123,4 +130,5 @@ const Hero = () => {
       </div>
     </div>;
 };
+
 export default Hero;

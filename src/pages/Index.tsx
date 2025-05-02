@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -9,16 +10,20 @@ import SocialProof from "../components/SocialProof";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import LaunchCTA from "../components/LaunchCTA";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+
 declare global {
   interface Window {
     Paddle: any;
   }
 }
+
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     // Initialize the Intersection Observer for scroll animations
     observerRef.current = new IntersectionObserver(entries => {
@@ -65,6 +70,7 @@ const Index = () => {
       }
     };
   }, []);
+
   const openCheckout = () => {
     setIsLoading(true);
     if (!window.Paddle) {
@@ -108,20 +114,21 @@ const Index = () => {
       setIsLoading(false);
     }
   };
+
   return <div className="min-h-screen bg-white">
       <Header />
       <main>
         <Hero />
-        <UseCases />
-        <WhyBizneX />
-        <HowItWorks />
         <Features />
+        <UseCases />
+        <HowItWorks />
+        <LaunchCTA />
         <SocialProof />
         <Pricing />
         <FAQ />
-        
       </main>
       <Footer />
     </div>;
 };
+
 export default Index;
