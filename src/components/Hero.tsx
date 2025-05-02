@@ -52,7 +52,7 @@ const Hero = () => {
             </span> <br />
             <span className="heading-gradient inline-block mt-2 relative">
               Limitless Use Cases.
-              <div className="absolute -right-12 -top-7 w-8 h-8 bg-gradient-to-br from-biznex-secondary to-biznex-primary rounded-full opacity-70 blur-sm animate-pulse-slow"></div>
+              <div className="absolute -right-13 -top-7 w-8 h-8 bg-gradient-to-br from-biznex-secondary to-biznex-primary rounded-full opacity-70 blur-sm animate-pulse-slow"></div>
             </span> <br />
             <span className="relative inline-block mt-2">
               One Platform.
