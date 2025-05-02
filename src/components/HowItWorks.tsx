@@ -22,7 +22,7 @@ const HowItWorks = () => {
     description: "Monitor performance in real time. See user inputs, engagement levels, and completion rates to refine your flows and boost results.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }];
-  return <section id="how-it-works" className="bg-gray-50 py-[20px]">
+  return <section id="how-it-works" className="bg-gray-50 py-[12px]">
       <div className="container-section">
         {/* Main frame containing both text and content */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
