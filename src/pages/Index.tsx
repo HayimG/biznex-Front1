@@ -72,47 +72,7 @@ const Index = () => {
   }, []);
 
   const openCheckout = () => {
-    setIsLoading(true);
-    if (!window.Paddle) {
-      toast({
-        title: "שגיאה",
-        description: "טוען את Paddle... נסה שוב בעוד רגע",
-        variant: "destructive"
-      });
-      setIsLoading(false);
-      return;
-    }
-    try {
-      // Use Paddle's direct checkout instead of API call to avoid CORS issues
-      window.Paddle.Checkout.open({
-        settings: {
-          displayMode: "overlay",
-          theme: "light",
-          locale: "he"
-        },
-        items: [{
-          priceId: "pri_01jt60bbz9ne82q0t71eg43vn1",
-          quantity: 1
-        }],
-        customer: {
-          email: "test@example.com"
-        },
-        customData: {
-          userId: "cl_test_123"
-        },
-        successUrl: "https://app.biznex.io/subscription/success"
-      });
-      console.log("Paddle checkout opened");
-    } catch (error) {
-      console.error("Error opening Paddle checkout:", error);
-      toast({
-        title: "שגיאה",
-        description: "לא הצלחנו לפתוח את טופס התשלום",
-        variant: "destructive"
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    window.location.href = "https://biznex.io/app";
   };
 
   return <div className="min-h-screen bg-white">

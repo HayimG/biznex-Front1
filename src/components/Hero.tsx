@@ -62,17 +62,23 @@ const Hero = () => {
 
           {/* Enhanced Quick Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left max-w-3xl mx-auto bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm animate-fade-in">
-            {["Launch with 20+ ready-made templates", "Customize with a no-code visual builder", "Automate support, capture leads, sell products", "Seamlessly integrate with Stripe, Calendly, CRMs, and more"].map((benefit, index) => <div key={index} className="flex items-start gap-3 p-2 hover:bg-biznex-navy/5 rounded-lg transition-colors">
+            {["Launch with 20+ ready-made templates", "Customize with a no-code visual builder", "Automate support, capture leads, sell products", "Seamlessly integrate with Stripe, Calendly, CRMs, and more"].map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3 p-2 hover:bg-biznex-navy/5 rounded-lg transition-colors">
                 <div className="bg-gradient-to-br from-biznex-navy to-biznex-blue rounded-full p-1.5 shrink-0 mt-0.5 shadow-sm">
                   <Check className="h-4 w-4 text-white" />
                 </div>
                 <span className="text-gray-700 font-medium">{benefit}</span>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* Enhanced CTA Section */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
-            <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-xl transition-all duration-300">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.location.href = "https://biznex.io/app"}
+            >
               Start Free
               <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
               <span className="text-xs opacity-80 ml-1">No credit card needed</span>

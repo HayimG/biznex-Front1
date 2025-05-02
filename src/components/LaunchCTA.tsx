@@ -35,6 +35,7 @@ const LaunchCTA = () => {
                 <Button 
                   size="lg"
                   className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group"
+                  onClick={() => window.location.href = "https://biznex.io/app"}
                 >
                   Start Building for Free
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
@@ -44,6 +45,7 @@ const LaunchCTA = () => {
                   variant="ghost"
                   size="lg"
                   className="text-biznex-navy border border-biznex-navy/20 hover:bg-biznex-navy/5 px-8 py-6 h-auto rounded-full text-lg group relative"
+                  onClick={() => window.location.href = "https://biznex.io/app"}
                 >
                   <Play className="mr-1" size={18} />
                   See Live Demo

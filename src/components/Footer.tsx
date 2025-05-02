@@ -21,6 +21,7 @@ const Footer = () => {
             <Button 
               size="lg"
               className="bg-white text-biznex-purple hover:bg-gray-100 px-8"
+              onClick={() => window.location.href = "https://biznex.io/app"}
             >
               Start Building for Free
               <ArrowRight className="ml-2" size={18} />
@@ -91,7 +92,10 @@ const Footer = () => {
                   placeholder="Email address"
                   className="rounded-r-none bg-gray-800 border-gray-700 text-white"
                 />
-                <Button className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple">
+                <Button 
+                  className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple"
+                  onClick={() => window.location.href = "https://biznex.io/app"}
+                >
                   Subscribe
                 </Button>
               </div>

@@ -64,11 +64,13 @@ const Header = () => {
           <Button 
             variant="outline" 
             className="border-biznex-primary text-biznex-primary hover:bg-biznex-primary hover:text-white transition-all hover:scale-[1.02]"
+            onClick={() => window.location.href = "https://biznex.io/app"}
           >
             Sign In
           </Button>
           <Button 
             className="bg-biznex-primary hover:bg-biznex-primary/90 text-white rounded-full px-6 hover:shadow-lg transition-all hover:scale-[1.02]"
+            onClick={() => window.location.href = "https://biznex.io/app"}
           >
             Start Free
           </Button>
@@ -134,13 +136,19 @@ const Header = () => {
               <Button 
                 variant="outline" 
                 className="w-full border-2 border-biznex-primary text-biznex-primary hover:bg-biznex-primary hover:text-white text-lg py-6"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  window.location.href = "https://biznex.io/app";
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Sign In
               </Button>
               <Button 
                 className="w-full bg-biznex-primary hover:bg-biznex-primary/90 text-white rounded-full text-lg py-6"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  window.location.href = "https://biznex.io/app";
+                  setIsMobileMenuOpen(false);
+                }}
               >
                 Start Free
               </Button>
