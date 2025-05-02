@@ -1,7 +1,5 @@
-
 import { ArrowRight, Calendar, Star, Users, Zap, CheckCircle, CircleDollarSign, FileText, LayoutList, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const UseCases = () => {
   const useCases = [{
     title: "Lead Generation & Qualification",
@@ -46,9 +44,7 @@ const UseCases = () => {
     icon: LayoutList,
     color: "bg-orange-500"
   }];
-
-  return (
-    <section id="use-cases" className="bg-white py-[51px]">
+  return <section id="use-cases" className="py-[51px] bg-gray-50">
       <div className="container-section">
         {/* Main frame containing both text and cards */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
@@ -63,20 +59,16 @@ const UseCases = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group">
+            {useCases.map((useCase, index) => <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group">
                 <div className={`${useCase.color} text-white p-3 rounded-lg inline-flex mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <useCase.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">{useCase.title}</h3>
                 <p className="text-gray-600 mb-3">{useCase.description}</p>
-                {useCase.stats && (
-                  <div className="bg-gray-50 rounded-lg py-2 px-3 text-sm font-medium text-gray-700">
+                {useCase.stats && <div className="bg-gray-50 rounded-lg py-2 px-3 text-sm font-medium text-gray-700">
                     {useCase.stats}
-                  </div>
-                )}
-              </div>
-            ))}
+                  </div>}
+              </div>)}
           </div>
 
           <div className="text-center mt-12">
@@ -87,8 +79,6 @@ const UseCases = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default UseCases;
