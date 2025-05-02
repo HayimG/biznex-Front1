@@ -1,6 +1,4 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
 const FAQ = () => {
   const faqs = [{
     question: "What is BizneX?",
@@ -21,9 +19,7 @@ const FAQ = () => {
     question: "Can I white-label the conversational flows?",
     answer: "Yes, our Pro and Enterprise plans allow you to fully white-label your conversational experiences with your own branding, custom domains, and CSS customization."
   }];
-  
-  return (
-    <section id="faq" className="bg-white py-[50px]">
+  return <section id="faq" className="py-[50px] bg-gray-50">
       <div className="container-section">
         {/* Main frame containing both text and content */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
@@ -39,16 +35,14 @@ const FAQ = () => {
 
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
+              {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
                   <AccordionTrigger className="text-lg font-medium text-left hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600">
                     {faq.answer}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
 
@@ -67,8 +61,6 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FAQ;
