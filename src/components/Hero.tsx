@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Enhanced Dynamic Background with Animated Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/15 rounded-full opacity-70 blur-[100px] animate-pulse-slow"></div>
-        {/*  <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-purple-200 rounded-full opacity-60 blur-[80px] animate-pulse-slow animation-delay-2000"></div> */}
+        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-purple-200 rounded-full opacity-60 blur-[80px] animate-pulse-slow animation-delay-2000"></div>
         <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-blue-200/50 rounded-full opacity-50 blur-[60px] animate-pulse-slow animation-delay-1000"></div>
         
         {/* Animated particles */}
@@ -48,7 +48,7 @@ const Hero = () => {
           <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
             <span className="inline-block relative">
               Smarter Conversations.
-              <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-biznex-blue transform -translate-x-1/2 transition-all duration-1000 delay-1000" style={{ width: isVisible ? '80%' : '0%' }}></span>
+           {/*    <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-biznex-blue transform -translate-x-1/2 transition-all duration-1000 delay-1000" style={{ width: isVisible ? '80%' : '0%' }}></span> */}
             </span> <br />
             <span className="heading-gradient inline-block mt-2 relative">
               Limitless Use Cases.
