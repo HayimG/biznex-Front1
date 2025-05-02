@@ -1,6 +1,30 @@
+
 import { ArrowRight, Calendar, Star, Users, Zap, CheckCircle, CircleDollarSign, FileText, LayoutList, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useRef, useState } from "react";
+
 const UseCases = () => {
+  const [visibleCases, setVisibleCases] = useState<number[]>([]);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.getAttribute('data-index') || '0');
+          setVisibleCases(prev => [...prev, index]);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    document.querySelectorAll('.use-case-item').forEach(item => {
+      observer.observe(item);
+    });
+    
+    return () => observer.disconnect();
+  }, []);
+  
   const useCases = [{
     title: "Lead Generation & Qualification",
     description: "Capture leads with smart, engaging flows that ask the right questions and score automatically.",
@@ -44,11 +68,12 @@ const UseCases = () => {
     icon: LayoutList,
     color: "bg-orange-500"
   }];
+  
   return <section id="use-cases" className="bg-gray-50 py-[10px]">
       <div className="container-section">
         {/* Main frame containing both text and cards */}
         <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
             <p className="text-biznex-blue font-medium tracking-wider mb-3">USE CASES</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Whatever Your Goal — <span className="heading-gradient">There's a Flow for That</span>
@@ -59,7 +84,16 @@ const UseCases = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => <div key={index} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group">
+            {useCases.map((useCase, index) => (
+              <div 
+                key={index} 
+                className={`bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-300 group use-case-item ${visibleCases.includes(index) ? 'animate-bounce-subtle' : 'opacity-0'}`}
+                data-index={index}
+                style={{ 
+                  animationDelay: `${index * 150}ms`,
+                  animationDuration: '2s'
+                }}
+              >
                 <div className={`${useCase.color} text-white p-3 rounded-lg inline-flex mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <useCase.icon className="h-6 w-6" />
                 </div>
@@ -68,11 +102,12 @@ const UseCases = () => {
                 {useCase.stats && <div className="bg-gray-50 rounded-lg py-2 px-3 text-sm font-medium text-gray-700">
                     {useCase.stats}
                   </div>}
-              </div>)}
+              </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">
-            <Button className="btn-outline group">
+            <Button className="btn-outline group animate-pulse-slow">
               Explore All Use Cases
               <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
             </Button>
