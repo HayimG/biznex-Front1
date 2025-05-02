@@ -1,3 +1,4 @@
+
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Hero = () => {
@@ -17,7 +18,9 @@ const Hero = () => {
           {/* Enhanced Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-biznex-navy/10 border border-biznex-navy/20 rounded-full animate-fade-in">
             <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => {})}
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-biznex-navy to-biznex-blue ring-2 ring-white" />
+              ))}
             </div>
             <span className="text-sm font-semibold text-biznex-navy">BUILD INTERACTIVE CONVERSATION FLOWS</span>
           </div>
