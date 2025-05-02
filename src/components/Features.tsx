@@ -1,8 +1,11 @@
+
 import { CheckCircle, Code, Zap, Users, Database, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
+
 const Features = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -14,37 +17,49 @@ const Features = () => {
     }, {
       threshold: 0.2
     });
+
     document.querySelectorAll('.feature-card-container').forEach(card => {
       observer.observe(card);
     });
+
     return () => observer.disconnect();
   }, []);
-  const features = [{
-    icon: <MessageSquare className="h-12 w-12 text-biznex-primary" />,
-    title: "Visual Flow Builder",
-    description: "Create interactive conversational experiences with our intuitive drag-and-drop builder, no coding required."
-  }, {
-    icon: <Zap className="h-12 w-12 text-biznex-accent" />,
-    title: "Logic Branching",
-    description: "Design complex conversation flows with conditional logic and dynamic content based on user responses."
-  }, {
-    icon: <Database className="h-12 w-12 text-biznex-secondary" />,
-    title: "Data Collection",
-    description: "Capture and store user responses securely with customizable forms and database integration."
-  }, {
-    icon: <Code className="h-12 w-12 text-biznex-navy" />,
-    title: "API Integration",
-    description: "Connect to any third-party service with webhooks and API integrations to extend functionality."
-  }, {
-    icon: <Users className="h-12 w-12 text-biznex-blue" />,
-    title: "Team Collaboration",
-    description: "Work together with your team on flow design, testing, and deployment with real-time collaboration."
-  }, {
-    icon: <CheckCircle className="h-12 w-12 text-biznex-secondary" />,
-    title: "Analytics Dashboard",
-    description: "Gain insights from user interactions with comprehensive analytics and conversion tracking."
-  }];
-  return <section id="features" className="bg-white relative overflow-hidden py-[30px]">
+
+  const features = [
+    {
+      icon: <MessageSquare className="h-12 w-12 text-biznex-primary" />,
+      title: "Visual Flow Builder",
+      description: "Create interactive conversational experiences with our intuitive drag-and-drop builder, no coding required."
+    },
+    {
+      icon: <Zap className="h-12 w-12 text-biznex-accent" />,
+      title: "Logic Branching",
+      description: "Design complex conversation flows with conditional logic and dynamic content based on user responses."
+    },
+    {
+      icon: <Database className="h-12 w-12 text-biznex-secondary" />,
+      title: "Data Collection",
+      description: "Capture and store user responses securely with customizable forms and database integration."
+    },
+    {
+      icon: <Code className="h-12 w-12 text-biznex-navy" />,
+      title: "API Integration",
+      description: "Connect to any third-party service with webhooks and API integrations to extend functionality."
+    },
+    {
+      icon: <Users className="h-12 w-12 text-biznex-blue" />,
+      title: "Team Collaboration",
+      description: "Work together with your team on flow design, testing, and deployment with real-time collaboration."
+    },
+    {
+      icon: <CheckCircle className="h-12 w-12 text-biznex-secondary" />,
+      title: "Analytics Dashboard",
+      description: "Gain insights from user interactions with comprehensive analytics and conversion tracking."
+    }
+  ];
+
+  return (
+    <section id="features" className="bg-white relative overflow-hidden py-[30px]">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-biznex-primary/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-biznex-accent/5 rounded-full blur-3xl -z-10"></div>
@@ -68,34 +83,44 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => <div key={index} className="feature-card-container" data-index={index}>
-              <Card className={`feature-card border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${visibleItems.includes(index) ? 'animate-scale-in' : 'opacity-0 scale-95'}`} style={{
-            transitionDelay: `${index * 100}ms`
-          }}>
-                <CardHeader>
-                  <div className="mb-4 relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-biznex-primary/20 to-biznex-secondary/20 rounded-full blur-xl opacity-70"></div>
-                    <div className="relative bg-white p-3 rounded-full inline-flex items-center justify-center border border-gray-100 shadow-sm">
-                      {feature.icon}
+        {/* Main features container with frame */}
+        <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="feature-card-container" data-index={index}>
+                <Card 
+                  className={`feature-card rounded-2xl bg-white shadow-md border border-gray-100 hover:border-biznex-primary/30 transition-all duration-500 ${
+                    visibleItems.includes(index) ? 'animate-scale-in' : 'opacity-0 scale-95'
+                  }`} 
+                  style={{
+                    transitionDelay: `${index * 100}ms`
+                  }}
+                >
+                  <CardHeader>
+                    <div className="mb-4 relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-biznex-primary/20 to-biznex-secondary/20 rounded-full blur-xl opacity-70"></div>
+                      <div className="relative bg-white p-3 rounded-full inline-flex items-center justify-center border border-gray-100 shadow-sm">
+                        {feature.icon}
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="text-xl font-semibold group">
-                    {feature.title}
-                    <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-biznex-primary to-biznex-secondary transition-all duration-300"></span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>)}
+                    <CardTitle className="text-xl font-semibold group">
+                      {feature.title}
+                      <span className="block w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-biznex-primary to-biznex-secondary transition-all duration-300"></span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600 text-base">
+                      {feature.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
-        
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Features;
