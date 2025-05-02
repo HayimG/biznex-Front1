@@ -62,7 +62,7 @@ const SocialProof = () => {
               </span>
             </h2>
             <p className="text-gray-600 text-lg">
-              Thousands of companies trust BizneX to power their most critical customer interactions.
+              Thousands of business trust BizneX to power their most critical customer interactions.
             </p>
           </div>
 
