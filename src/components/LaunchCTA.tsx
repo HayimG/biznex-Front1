@@ -1,3 +1,4 @@
+
 import { ArrowRight, Play, Rocket, Zap, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -68,7 +69,7 @@ const LaunchCTA = () => {
             <div className={`flex flex-col sm:flex-row justify-center gap-4 mb-12 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-4'}`} style={{
             transitionDelay: '700ms'
           }}>
-              <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden" onClick={() => window.location.href = "https://biznex.io/app"}>
+              <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue hover:from-biznex-blue hover:to-biznex-navy text-white px-8 py-6 h-auto rounded-full text-lg group relative overflow-hidden" onClick={() => window.location.href = "https://app.biznex.io"}>
                 {/* Ripple effect */}
                 <span className="absolute inset-0 w-full h-full">
                   <span className="absolute inset-0 bg-white rounded-full scale-0 opacity-0 group-hover:animate-ripple"></span>
@@ -81,8 +82,6 @@ const LaunchCTA = () => {
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
                 </span>
               </Button>
-              
-              
             </div>
           </div>
           

@@ -1,3 +1,4 @@
+
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -52,7 +53,7 @@ const Hero = () => {
 
           {/* Redesigned CTA Button - Longer and Thinner */}
           <div className={`flex flex-col items-center animate-fade-in mb-20 transition-all duration-1000 delay-900 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
-            <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-16 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500" onClick={() => window.location.href = "https://biznex.io/app"}>
+            <Button size="lg" className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-16 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500" onClick={() => window.location.href = "https://app.biznex.io"}>
               {/* Animated glow effect */}
               <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
               
@@ -63,7 +64,6 @@ const Hero = () => {
                 START FREE
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
               </span>
-              {/*  <span className="absolute bottom-1 left-0 right-0 text-xs text-white/80">No credit card needed</span> */}
             </Button>
             <p className="mt-2 text-sm text-gray-600">No credit card needed</p>
           </div>

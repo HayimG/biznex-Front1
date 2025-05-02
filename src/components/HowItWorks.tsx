@@ -1,4 +1,3 @@
-
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -94,17 +93,21 @@ const HowItWorks = () => {
             ))}
           </div>
 
-          {/* Time Comparison */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            
-
-            
-          </div>
-
           <div className="text-center mt-16 how-it-works-animate animate-fade-in-up" style={{ transitionDelay: '700ms' }}>
-            <Button className="btn-secondary group">
-              See BizneX in Action
-              <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={18} />
+            <Button 
+              className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-8 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500"
+              onClick={() => window.location.href = "https://app.biznex.io"}
+            >
+              {/* Animated glow effect */}
+              <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
+              
+              {/* Moving light effect on hover */}
+              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 animate-shine"></span>
+              
+              <span className="relative flex items-center">
+                See BizneX in Action
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+              </span>
             </Button>
           </div>
         </div>
