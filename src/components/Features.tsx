@@ -44,7 +44,7 @@ const Features = () => {
     title: "Analytics Dashboard",
     description: "Gain insights from user interactions with comprehensive analytics and conversion tracking."
   }];
-  return <section id="features" className="bg-white relative overflow-hidden py-[50px]">
+  return <section id="features" className="bg-white relative overflow-hidden py-[30px]">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-biznex-primary/5 rounded-full blur-3xl -z-10"></div>
       <div className="absolute bottom-20 left-20 w-72 h-72 bg-biznex-accent/5 rounded-full blur-3xl -z-10"></div>

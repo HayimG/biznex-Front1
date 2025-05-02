@@ -1,4 +1,3 @@
-
 import { ArrowRight, Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -7,7 +6,7 @@ const Hero = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-  return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden py-[50px]">
+  return <div className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden py-[80px]">
       {/* Enhanced Dynamic Background with Animated Layers */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-biznex-blue/15 rounded-full opacity-70 blur-[100px] animate-pulse-slow"></div>
