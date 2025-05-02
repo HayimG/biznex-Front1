@@ -1,43 +1,32 @@
-
 import { CheckCircle, X } from "lucide-react";
-
 const WhyBizneX = () => {
-  const comparisonData = [
-    { 
-      feature: "Building Speed", 
-      biznex: "Minutes", 
-      traditional: "Days or weeks",
-      highlight: true
-    },
-    { 
-      feature: "Coding Required", 
-      biznex: "None", 
-      traditional: "Often needed for customization" 
-    },
-    { 
-      feature: "AI Capabilities", 
-      biznex: "Built-in", 
-      traditional: "Limited or additional cost" 
-    },
-    { 
-      feature: "Integrations", 
-      biznex: "30+ native connections", 
-      traditional: "Typically 5-10 basics" 
-    },
-    { 
-      feature: "Conversation Types", 
-      biznex: "Unlimited customizable templates", 
-      traditional: "Limited templates" 
-    },
-    { 
-      feature: "Analytics", 
-      biznex: "Comprehensive", 
-      traditional: "Basic metrics only" 
-    },
-  ];
-
-  return (
-    <section className="py-20 bg-gray-50">
+  const comparisonData = [{
+    feature: "Building Speed",
+    biznex: "Minutes",
+    traditional: "Days or weeks",
+    highlight: true
+  }, {
+    feature: "Coding Required",
+    biznex: "None",
+    traditional: "Often needed for customization"
+  }, {
+    feature: "AI Capabilities",
+    biznex: "Built-in",
+    traditional: "Limited or additional cost"
+  }, {
+    feature: "Integrations",
+    biznex: "30+ native connections",
+    traditional: "Typically 5-10 basics"
+  }, {
+    feature: "Conversation Types",
+    biznex: "Unlimited customizable templates",
+    traditional: "Limited templates"
+  }, {
+    feature: "Analytics",
+    biznex: "Comprehensive",
+    traditional: "Basic metrics only"
+  }];
+  return <section className="py-20 bg-gray-50">
       <div className="container-section">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-biznex-blue font-medium tracking-wider mb-3">COMPARISON</p>
@@ -56,21 +45,16 @@ const WhyBizneX = () => {
               </tr>
             </thead>
             <tbody>
-              {comparisonData.map((row, index) => (
-                <tr 
-                  key={index} 
-                  className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} ${row.highlight ? 'bg-blue-50' : ''}`}
-                >
+              {comparisonData.map((row, index) => <tr key={index} className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} ${row.highlight ? 'bg-blue-50' : ''}`}>
                   <td className="py-4 px-6 border-t border-gray-200">{row.feature}</td>
                   <td className="py-4 px-6 text-center border-t border-gray-200 font-medium text-biznex-navy">
                     <div className="flex items-center justify-center gap-2">
                       {row.biznex}
-                      {row.highlight && <CheckCircle className="h-4 w-4 text-green-500" />}
+                      {row.highlight}
                     </div>
                   </td>
                   <td className="py-4 px-6 text-center border-t border-gray-200 text-gray-600">{row.traditional}</td>
-                </tr>
-              ))}
+                </tr>)}
             </tbody>
           </table>
         </div>
@@ -95,8 +79,6 @@ const WhyBizneX = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyBizneX;
