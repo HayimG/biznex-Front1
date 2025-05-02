@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-tech-pattern opacity-50"></div>
       </div>
 
-      <div className="container-section py-[30px]">
+      <div className="container-section py-[20px]">
         <div className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${isVisible ? 'opacity-100 transform-none' : 'opacity-0 translate-y-10'}`}>
           {/* Enhanced Interactive Badge */}
           
