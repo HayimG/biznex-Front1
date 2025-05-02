@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,16 +23,22 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
-          : "bg-transparent py-4"
-      }`}
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5",
+        isScrolled ? 
+          "frosted-nav shadow-md py-3" : 
+          "bg-transparent"
+      )}
     >
       <div className="container-section flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-biznex-purple to-biznex-light-purple bg-clip-text text-transparent">
+            <span className={cn(
+              "text-2xl font-bold transition-all duration-300",
+              isScrolled ?
+                "text-biznex-primary" :
+                "bg-gradient-to-r from-biznex-primary to-biznex-secondary bg-clip-text text-transparent"
+            )}>
               BizneX
             </span>
           </a>
@@ -39,37 +46,30 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#features"
-            className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
-          >
+          <a href="#features" className="nav-link">
             Features
           </a>
-          <a
-            href="#showcase"
-            className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
-          >
+          <a href="#showcase" className="nav-link">
             How it Works
           </a>
-          <a
-            href="#pricing"
-            className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
-          >
+          <a href="#pricing" className="nav-link">
             Pricing
           </a>
-          <a
-            href="#faq"
-            className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
-          >
+          <a href="#faq" className="nav-link">
             FAQ
           </a>
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" className="border-biznex-purple text-biznex-purple hover:bg-biznex-purple hover:text-white">
+          <Button 
+            variant="outline" 
+            className="border-biznex-primary text-biznex-primary hover:bg-biznex-primary hover:text-white transition-all hover:scale-[1.02]"
+          >
             Sign In
           </Button>
-          <Button className="bg-biznex-purple hover:bg-biznex-light-purple">
+          <Button 
+            className="bg-biznex-primary hover:bg-biznex-primary/90 text-white rounded-full px-6 hover:shadow-lg transition-all hover:scale-[1.02]"
+          >
             Start Free
           </Button>
         </div>
@@ -77,7 +77,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-gray-700"
+          className="md:hidden text-biznex-dark hover:text-biznex-primary transition-colors p-2 rounded-full hover:bg-gray-100"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,41 +86,62 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white py-4 px-4 shadow-lg">
-          <nav className="flex flex-col space-y-4">
+        <div className="md:hidden fixed inset-0 z-50 bg-white">
+          <div className="container-section py-5 flex justify-between items-center">
+            <a href="/" className="flex items-center">
+              <span className="text-2xl font-bold text-biznex-primary">
+                BizneX
+              </span>
+            </a>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-biznex-dark hover:text-biznex-primary transition-colors p-2 rounded-full hover:bg-gray-100"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+          <nav className="container-section flex flex-col space-y-6 py-10 staggered-fade-in">
             <a
               href="#features"
-              className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
+              className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </a>
             <a
               href="#showcase"
-              className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
+              className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               How it Works
             </a>
             <a
               href="#pricing"
-              className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
+              className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Pricing
             </a>
             <a
               href="#faq"
-              className="text-gray-700 hover:text-biznex-purple font-medium transition-colors"
+              className="text-xl font-medium text-biznex-dark hover:text-biznex-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </a>
-            <div className="flex flex-col space-y-2 pt-2 border-t">
-              <Button variant="outline" className="border-biznex-purple text-biznex-purple hover:bg-biznex-purple hover:text-white w-full">
+            <div className="flex flex-col space-y-4 pt-6">
+              <Button 
+                variant="outline" 
+                className="w-full border-2 border-biznex-primary text-biznex-primary hover:bg-biznex-primary hover:text-white text-lg py-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Sign In
               </Button>
-              <Button className="bg-biznex-purple hover:bg-biznex-light-purple w-full">
+              <Button 
+                className="w-full bg-biznex-primary hover:bg-biznex-primary/90 text-white rounded-full text-lg py-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Start Free
               </Button>
             </div>
