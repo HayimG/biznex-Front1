@@ -1,30 +1,28 @@
-
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HowItWorks = () => {
   const steps = [{
     number: "1",
     title: "Choose Your Starting Point",
     description: "Begin with a template designed for your use case, or start from scratch with our intuitive visual builder.",
-    image: "public/lovable-uploads/186c78d9-7857-4492-86cd-645865a19035.png"
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }, {
     number: "2",
     title: "Customize Your Flow",
     description: "Drag-and-drop elements, add logic, connect your tools, and personalize the look and feel to match your brand.",
-    image: "public/lovable-uploads/326ca2ed-dff1-4ca6-8c81-4159f9210bde.png"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }, {
     number: "3",
     title: "Publish & Convert",
     description: "Embed on your website, share via link, or deploy as a popup. Then watch the results roll in through your dashboard.",
-    image: "public/lovable-uploads/f612b168-2337-46f2-8175-c3bec7b08957.png"
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }, {
     number: "4",
     title: "Track & Optimize",
     description: "Monitor performance in real time. See user inputs, engagement levels, and completion rates to refine your flows and boost results.",
-    image: "public/lovable-uploads/c637f9d7-a007-4c52-806e-e933043f1e7f.png"
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
   }];
 
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -86,15 +84,9 @@ const HowItWorks = () => {
                 </div>
                 
                 <div className={`flex-1 how-it-works-animate animate-scale-in`} style={{ transitionDelay: `${300 + (index * 100)}ms` }}>
-                  <div className="relative h-full w-full rounded-xl overflow-hidden shadow-lg">
-                    <AspectRatio ratio={3/2} className="bg-gray-100">
-                      <img 
-                        src={step.image} 
-                        alt={step.title} 
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </AspectRatio>
+                  <div className="relative rounded-xl overflow-hidden shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10"></div>
+                    <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
                   </div>
                 </div>
               </div>
