@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -19,7 +18,7 @@ const HowItWorks = () => {
     number: "3",
     title: "Publish & Convert",
     description: "Embed on your website, share via link, or deploy as a popup. Then watch the results roll in through your dashboard.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
+    image: "public/lovable-uploads/f612b168-2337-46f2-8175-c3bec7b08957.png"
   }, {
     number: "4",
     title: "Track & Optimize",
