@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -23,7 +24,7 @@ const HowItWorks = () => {
     number: "4",
     title: "Track & Optimize",
     description: "Monitor performance in real time. See user inputs, engagement levels, and completion rates to refine your flows and boost results.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
+    image: "public/lovable-uploads/c637f9d7-a007-4c52-806e-e933043f1e7f.png"
   }];
 
   const observerRef = useRef<IntersectionObserver | null>(null);
