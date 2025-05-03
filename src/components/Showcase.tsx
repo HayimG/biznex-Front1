@@ -9,18 +9,33 @@ const Showcase = () => {
       title: "Design Your Flow",
       description: "Create a flowchart of your conversation with our drag-and-drop builder. Customize each step to gather the information you need.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      features: [
+        "Intuitive visual interface",
+        "Real-time preview as you build",
+        "Templates for quick starts"
+      ]
     },
     {
       number: "02",
       title: "Add Logic & Integrations",
       description: "Implement conditional logic, connect to external services, and customize the user experience based on previous responses.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      features: [
+        "Conditional branching",
+        "API integrations",
+        "Custom variable handling"
+      ]
     },
     {
       number: "03",
-      title: "Publish & Convert",
-      description: "Embed on your website, share via link, or deploy as a popup. Then watch the results roll in through your dashboard.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      title: "Publish & Analyze",
+      description: "Deploy your flow with a single click, embed it anywhere, and gain insights from user interactions with our analytics dashboard.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      features: [
+        "One-click deployment",
+        "Multi-platform embedding",
+        "Detailed analytics"
+      ]
     },
   ];
 
@@ -51,24 +66,18 @@ const Showcase = () => {
                 <p className="text-gray-600 text-lg">{step.description}</p>
                 
                 <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-biznex-teal mr-2 mt-0.5" />
-                    <span className="text-gray-700">Intuitive visual interface</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-biznex-teal mr-2 mt-0.5" />
-                    <span className="text-gray-700">Real-time preview as you build</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-biznex-teal mr-2 mt-0.5" />
-                    <span className="text-gray-700">Templates for quick starts</span>
-                  </li>
+                  {step.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-biznex-teal mr-2 mt-0.5" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
                 </ul>
                 
                 <div className="pt-2">
                   <Button 
                     className="bg-biznex-purple hover:bg-biznex-light-purple"
-                    redirectUrl="https://app.biznex.io/register"
+                    onClick={() => window.location.href = "https://app.biznex.io/register"}
                   >
                     Learn More
                   </Button>
