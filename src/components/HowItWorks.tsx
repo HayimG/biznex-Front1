@@ -86,7 +86,21 @@ const HowItWorks = () => {
                 <div className={`flex-1 how-it-works-animate animate-scale-in`} style={{ transitionDelay: `${300 + (index * 100)}ms` }}>
                   <div className="relative rounded-xl overflow-hidden shadow-lg">
                     <div className="absolute inset-0 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10"></div>
-                    <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
+                    {index === 0 ? (
+                      <div className="flex justify-center p-4 bg-white">
+                        <img 
+                          src={step.image} 
+                          alt={step.title} 
+                          className="max-w-full h-auto object-contain max-h-[300px]" 
+                        />
+                      </div>
+                    ) : (
+                      <img 
+                        src={step.image} 
+                        alt={step.title} 
+                        className="w-full h-auto object-cover" 
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -96,7 +110,7 @@ const HowItWorks = () => {
           <div className="text-center mt-16 how-it-works-animate animate-fade-in-up" style={{ transitionDelay: '700ms' }}>
             <Button 
               className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-8 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500"
-              onClick={() => window.location.href = "https://app.biznex.io"}
+              onClick={() => window.location.href = "https://app.biznex.io/register"}
             >
               {/* Animated glow effect */}
               <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
