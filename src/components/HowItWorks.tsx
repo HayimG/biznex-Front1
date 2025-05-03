@@ -14,7 +14,7 @@ const HowItWorks = () => {
     number: "2",
     title: "Customize Your Flow",
     description: "Drag-and-drop elements, add logic, connect your tools, and personalize the look and feel to match your brand.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80"
+    image: "public/lovable-uploads/326ca2ed-dff1-4ca6-8c81-4159f9210bde.png"
   }, {
     number: "3",
     title: "Publish & Convert",
