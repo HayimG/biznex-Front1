@@ -66,7 +66,10 @@ const Showcase = () => {
                 </ul>
                 
                 <div className="pt-2">
-                  <Button className="bg-biznex-purple hover:bg-biznex-light-purple">
+                  <Button 
+                    className="bg-biznex-purple hover:bg-biznex-light-purple"
+                    redirectUrl="https://app.biznex.io/register"
+                  >
                     Learn More
                   </Button>
                 </div>

@@ -88,7 +88,7 @@ const Index = () => {
   }, []);
 
   const openCheckout = () => {
-    window.location.href = "https://app.biznex.io";
+    window.location.href = "https://app.biznex.io/register";
   };
 
   return <div className="min-h-screen bg-white">

@@ -1,12 +1,13 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 const Footer = () => {
   return <footer className="bg-gray-900 text-white">
       <div className="container-section">
         {/* CTA Section */}
         
-
         <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-1">
@@ -66,7 +67,10 @@ const Footer = () => {
             <div className="flex flex-col space-y-3">
               <div className="flex">
                 <Input type="email" placeholder="Email address" className="rounded-r-none bg-gray-800 border-gray-700 text-white" />
-                <Button className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple" onClick={() => window.location.href = "https://biznex.io/app"}>
+                <Button 
+                  className="rounded-l-none bg-biznex-purple hover:bg-biznex-light-purple" 
+                  redirectUrl="https://app.biznex.io/register"
+                >
                   Subscribe
                 </Button>
               </div>
@@ -91,4 +95,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;

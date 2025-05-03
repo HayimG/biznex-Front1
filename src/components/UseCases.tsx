@@ -1,4 +1,3 @@
-
 import { ArrowRight, Calendar, Star, Users, Zap, CheckCircle, CircleDollarSign, FileText, LayoutList, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
@@ -112,7 +111,7 @@ const UseCases = () => {
           <div className="text-center mt-12 use-cases-animate animate-fade-in-up" style={{ transitionDelay: '700ms' }}>
             <Button 
               className="bg-gradient-to-r from-biznex-navy to-biznex-blue text-white px-8 py-4 h-12 rounded-full group relative overflow-hidden hover:shadow-[0_0_30px_rgba(62,146,204,0.6)] transition-all duration-500"
-              onClick={() => window.location.href = "https://app.biznex.io"}
+              redirectUrl="https://app.biznex.io/register"
             >
               {/* Animated glow effect */}
               <span className="absolute inset-0 bg-white/5 animate-pulse-slow"></span>
