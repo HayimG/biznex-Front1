@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import UseCases from "../components/UseCases";
 import WhyBizneX from "../components/WhyBizneX";
-import HowItWorks from "../components/HowItWorks";
+import Showcase from "../components/Showcase";
 import SocialProof from "../components/SocialProof";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
@@ -102,7 +102,7 @@ const Index = () => {
           <UseCases />
         </section>
         <section id="how-it-works">
-          <HowItWorks />
+          <Showcase />
         </section>
         <LaunchCTA />
         <section id="social-proof">

@@ -18,9 +18,9 @@ const Showcase = () => {
     },
     {
       number: "03",
-      title: "Publish & Analyze",
-      description: "Deploy your flow with a single click, embed it anywhere, and gain insights from user interactions with our analytics dashboard.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
+      title: "Publish & Convert",
+      description: "Embed on your website, share via link, or deploy as a popup. Then watch the results roll in through your dashboard.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
     },
   ];
 
