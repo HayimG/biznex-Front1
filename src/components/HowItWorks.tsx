@@ -1,6 +1,8 @@
-import { ArrowRight, CheckCircle } from "lucide-react";
+
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef } from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HowItWorks = () => {
   const steps = [{
@@ -84,9 +86,15 @@ const HowItWorks = () => {
                 </div>
                 
                 <div className={`flex-1 how-it-works-animate animate-scale-in`} style={{ transitionDelay: `${300 + (index * 100)}ms` }}>
-                  <div className="relative rounded-xl overflow-hidden shadow-lg">
-                    <div className="absolute inset-0 bg-gradient-to-r from-biznex-navy/10 to-biznex-blue/10"></div>
-                    <img src={step.image} alt={step.title} className="w-full h-auto object-cover" />
+                  <div className="relative h-full w-full rounded-xl overflow-hidden shadow-lg">
+                    <AspectRatio ratio={3/2} className="bg-gray-100">
+                      <img 
+                        src={step.image} 
+                        alt={step.title} 
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </AspectRatio>
                   </div>
                 </div>
               </div>
